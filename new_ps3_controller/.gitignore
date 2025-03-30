@@ -1,2 +1,4 @@
 servo_data.db
 *.swp
+config_debug.log
+debug.log
