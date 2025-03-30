@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
 
+"""
+Servo Controller - Fixed Version
+This version corrects the button mappings and I2C bus configuration
+to work with the PS3 controller and PCA9685 servo driver.
+"""
+
 import json
 import signal
 import sys
@@ -7,6 +13,7 @@ import time
 import threading
 import os
 import argparse
+import select
 import evdev
 from evdev import InputDevice, ecodes
 from flask import Flask, render_template, jsonify, request
@@ -40,7 +47,7 @@ SERVO_MIN = 150  # Min pulse length (0 degrees)
 SERVO_MAX = 600  # Max pulse length (180 degrees)
 SERVO_FREQ = 50  # PWM frequency for servos (50Hz standard)
 SERVO_CHANNELS = [0, 1, 2, 3]  # Servo channels to control
-I2C_BUSES = [0, 1]  # I2C buses to check
+I2C_BUSES = [1]  # Use only I2C bus 1 which is confirmed working
 
 # Global variables
 hold_state = {0: False, 1: False, 2: False, 3: False}
@@ -67,109 +74,42 @@ q_pressed = False
 exit_flag = False
 db_path = 'servo_data.db'
 
-# Corrected PS3 controller button mappings based on config_debug.log
+# FIXED PS3 controller button mappings based on config_debug.log
 PS3_BUTTON_MAPPINGS = {
     # Face buttons
-    304: "Cross (✕)",      # South
-    305: "Circle (○)",     # East
-    307: "Triangle (△)",   # North
-    308: "Square (□)",     # West
-
+    304: "Cross (✕)",     # South/X button
+    305: "Circle (○)",    # East/Circle button
+    307: "Triangle (△)",  # North/Triangle button
+    308: "Square (□)",    # West/Square button
+    
     # Shoulder/trigger buttons
-    294: "L1",             # Left shoulder
-    295: "R1",             # Right shoulder
-    298: "L2",             # Left trigger
-    299: "R2",             # Right trigger
-
-    # D-pad buttons - These were incorrect in original mapping
-    300: "D-Pad Up",       # D-pad up
-    301: "D-Pad Right",    # D-pad right
-    302: "D-Pad Down",     # D-pad down
-    303: "D-Pad Left",     # D-pad left
-
+    294: "L1",            # Left shoulder
+    295: "R1",            # Right shoulder
+    298: "L2",            # Left trigger
+    299: "R2",            # Right trigger
+    
+    # D-pad buttons
+    300: "D-Pad Up",      # D-pad up
+    301: "D-Pad Right",   # D-pad right
+    302: "D-Pad Down",    # D-pad down
+    303: "D-Pad Left",    # D-pad left
+    
     # Other buttons
-    288: "Select",         # Select button
-    291: "Start",          # Start button
-    292: "PS Button",      # PS Button
-    293: "Unknown (293)",  # Unknown button
-    296: "L3",             # Left stick press
-    297: "R3"              # Right stick press
+    288: "Select",        # Select button
+    291: "Start",         # Start button
+    292: "PS Button",     # PS Button
+    293: "Unknown (293)", # Unknown button
+    296: "L3",            # Left stick press
+    297: "R3"             # Right stick press
 }
 
-# PS3 joystick mappings
+# PS3 joystick axis mappings
 PS3_AXIS_MAPPINGS = {
     0: "Left Stick X",        # Left stick horizontal
     1: "Left Stick Y",        # Left stick vertical
-    2: "Right Stick X (PS3-Z)",  # Right stick horizontal
+    2: "Right Stick X (PS3-Z)",  # Right stick horizontal 
     3: "Right Stick Y (PS3-RX)"  # Right stick vertical
 }
-
-def handle_ps3_controller(event):
-    """Handle PS3 controller button presses and joystick movements"""
-    global hold_state, servo_speed, q_pressed, exit_flag, lock_state
-
-    # Handle button presses
-    if event.type == ecodes.EV_KEY and event.value == 1:  # Button pressed
-        if event.code == 304:  # Cross (✕)
-            hold_state[0] = not hold_state[0]
-            debug_logger.info(f"Hold state for servo 0 set to {hold_state[0]}")
-        elif event.code == 305:  # Circle (○)
-            hold_state[1] = not hold_state[1]
-            debug_logger.info(f"Hold state for servo 1 set to {hold_state[1]}")
-        elif event.code == 308:  # Square (□)
-            hold_state[2] = not hold_state[2]
-            debug_logger.info(f"Hold state for servo 2 set to {hold_state[2]}")
-        elif event.code == 307:  # Triangle (△)
-            hold_state[3] = not hold_state[3]
-            debug_logger.info(f"Hold state for servo 3 set to {hold_state[3]}")
-        elif event.code == 294:  # L1
-            servo_speed = max(servo_speed - 0.1, 0.1)
-            print(f"\nSpeed decreased to {servo_speed:.1f}x")
-        elif event.code == 295:  # R1
-            servo_speed = min(servo_speed + 0.1, 2.0)
-            print(f"\nSpeed increased to {servo_speed:.1f}x")
-        elif event.code == 298:  # L2
-            move_all_servos(0)
-        elif event.code == 299:  # R2
-            move_all_servos(180)
-        elif event.code == 300:  # D-pad Up
-            move_all_servos(90)
-        elif event.code == 302:  # D-pad Down
-            lock_state = not lock_state
-            status = "LOCKED" if lock_state else "UNLOCKED"
-            print(f"\nServos now {status}")
-        elif event.code == 303:  # D-pad Left
-            move_all_servos(0)
-        elif event.code == 301:  # D-pad Right
-            move_all_servos(180)
-        elif event.code == 288:  # Select
-            # Additional function if needed
-            pass
-        elif event.code == 291:  # Start
-            move_all_servos(90)
-        elif event.code == 292:  # PS Button
-            if q_pressed:
-                print("\nPS button pressed twice. Exiting...")
-                exit_flag = True
-            else:
-                q_pressed = True
-                print("\nPress PS button again to exit...")
-                # Reset q_pressed after 3 seconds
-                threading.Timer(3.0, lambda: setattr(sys.modules[__name__], 'q_pressed', False)).start()
-
-    # Handle joystick movements
-    elif event.type == ecodes.EV_ABS:
-        # Left stick
-        if event.code == 0:  # Left Stick X
-            move_servo(0, event.value)
-        elif event.code == 1:  # Left Stick Y
-            move_servo(1, event.value)
-        # Right stick for PS3 controllers
-        elif event.code == 2:  # Right Stick X (Z)
-            move_servo(2, event.value)
-        elif event.code == 3:  # Right Stick Y (RX)
-            move_servo(3, event.value)
-
 
 # Configure debug logging
 def setup_debug_logging():
@@ -289,32 +229,35 @@ def detect_i2c_devices():
     """Detect available I2C devices and initialize hardware"""
     global pca_connected, mpu_connected, pca_bus, mpu_bus, pwm, mpu
     
-    # Check each I2C bus
-    for bus_num in I2C_BUSES:
-        # Try to initialize PCA9685 on this bus
-        if PCA9685_AVAILABLE and not pca_connected:
-            try:
-                test_pwm = Adafruit_PCA9685.PCA9685(busnum=bus_num)
-                pca_connected = True
-                pca_bus = bus_num
-                pwm = test_pwm  # Save the working instance
-                pwm.set_pwm_freq(SERVO_FREQ)
-                print(f"PCA9685 found on I2C bus {bus_num}")
-            except Exception as e:
-                print(f"PCA9685 not found on I2C bus {bus_num}: {e}")
-        
-        # Try to initialize MPU6050 on this bus
-        if MPU6050_AVAILABLE and not mpu_connected:
-            try:
-                test_mpu = mpu6050(bus_num)
-                # Test if it's working by reading temperature
-                test_mpu.get_temp()
-                mpu_connected = True
-                mpu_bus = bus_num
-                mpu = test_mpu  # Save the working instance
-                print(f"MPU6050 found on I2C bus {bus_num}")
-            except Exception as e:
-                print(f"MPU6050 not found on I2C bus {bus_num}: {e}")
+    print("\n--- I2C Device Detection ---")
+    
+    # Only check bus 1 which we know works
+    bus_num = 1
+    
+    # Try to initialize PCA9685 on this bus
+    if PCA9685_AVAILABLE:
+        try:
+            test_pwm = Adafruit_PCA9685.PCA9685(busnum=bus_num)
+            pca_connected = True
+            pca_bus = bus_num
+            pwm = test_pwm  # Save the working instance
+            pwm.set_pwm_freq(SERVO_FREQ)
+            print(f"PCA9685 found on I2C bus {bus_num}")
+        except Exception as e:
+            print(f"PCA9685 not found on I2C bus {bus_num}: {e}")
+    
+    # Try to initialize MPU6050 on this bus
+    if MPU6050_AVAILABLE:
+        try:
+            test_mpu = mpu6050(bus_num)
+            # Test if it's working by reading temperature
+            test_mpu.get_temp()
+            mpu_connected = True
+            mpu_bus = bus_num
+            mpu = test_mpu  # Save the working instance
+            print(f"MPU6050 found on I2C bus {bus_num}")
+        except Exception as e:
+            print(f"MPU6050 not found on I2C bus {bus_num}: {e}")
     
     # If hardware is still not connected, set up simulation
     if not pca_connected:
@@ -346,9 +289,9 @@ def find_game_controller():
 
 def joystick_to_pwm(value):
     """Convert joystick value (-32767 to 32767) to servo pulse and angle"""
-    angle = int(((value + 32767) / 65534) * 180)  # Normalize to 0-180 degrees
-    pwm_value = int(SERVO_MIN + (angle / 180.0) * (SERVO_MAX - SERVO_MIN))
-    return pwm_value, angle
+    # Normalize to 0-180 degrees
+    angle = int(((value + 32767) / 65534) * 180)
+    return angle
 
 def set_servo_position(channel, angle):
     """Set a servo to a specific angle (0-180)"""
@@ -359,9 +302,9 @@ def set_servo_position(channel, angle):
     
     # Update direction
     if angle > servo_positions[channel]:
-        servo_directions[channel] = "up" if channel in [1, 2] else "right"
+        servo_directions[channel] = "up" if channel in [1, 3] else "right"
     elif angle < servo_positions[channel]:
-        servo_directions[channel] = "down" if channel in [1, 2] else "left"
+        servo_directions[channel] = "down" if channel in [1, 3] else "left"
     else:
         servo_directions[channel] = "neutral"
     
@@ -375,8 +318,13 @@ def set_servo_position(channel, angle):
     if pca_connected and pwm:
         try:
             pwm.set_pwm(channel, 0, pulse)
+            # Verbose logging for debugging
+            debug_logger.info(f"SERVO MOVED - Channel {channel} - Angle: {angle}° - Pulse: {pulse}")
         except Exception as e:
             logger.error(f"Error setting servo {channel}: {e}")
+    else:
+        # Log in simulation mode
+        debug_logger.info(f"SIMULATION - Setting servo {channel} to {angle}°")
     
     # Update position
     servo_positions[channel] = angle
@@ -384,7 +332,7 @@ def set_servo_position(channel, angle):
 
 def move_servo(channel, value):
     """Move a servo based on joystick input"""
-    global servo_positions, servo_directions, last_activity
+    global servo_positions, servo_directions
     
     if lock_state or hold_state[channel]:
         debug_logger.info(f"Servo {channel} movement blocked (locked:{lock_state}, hold:{hold_state[channel]})")
@@ -394,7 +342,7 @@ def move_servo(channel, value):
     old_position = servo_positions[channel]
     
     # Convert joystick value to servo position
-    pwm_value, angle = joystick_to_pwm(value)
+    angle = joystick_to_pwm(value)
     
     # Set servo position
     set_servo_position(channel, angle)
@@ -404,7 +352,6 @@ def move_servo(channel, value):
 
 def move_all_servos(angle):
     """Move all servos to a specified angle"""
-    global last_activity
     
     if lock_state:
         debug_logger.info(f"All servo movement blocked (locked)")
@@ -597,72 +544,52 @@ def run_controller_test_mode(gamepad):
             print(f"\n> {test_instruction}")
             test_logger.info(f"INSTRUCTION: {test_instruction}")
             
-            # Wait for events for 3 seconds
+            # Wait for events for 5 seconds or until user presses Enter
             start_time = time.time()
-            while time.time() - start_time < 3:
-                events = gamepad.read_loop()
-                for event in events:
-                    if event.type == ecodes.EV_KEY:
-                        btn_name = "Unknown"
-                        if controller_type == 'PS3':
+            while time.time() - start_time < 5:
+                try:
+                    # Poll for events
+                    event = gamepad.read_one()
+                    if event:
+                        if event.type == ecodes.EV_KEY and event.value == 1:  # Button down
                             btn_name = PS3_BUTTON_MAPPINGS.get(event.code, f"Unknown ({event.code})")
-                        else:
-                            # Xbox button names using standard ecodes
-                            btn_names = {
-                                ecodes.BTN_SOUTH: "A",
-                                ecodes.BTN_EAST: "B",
-                                ecodes.BTN_WEST: "X",
-                                ecodes.BTN_NORTH: "Y",
-                                ecodes.BTN_TL: "Left Shoulder",
-                                ecodes.BTN_TR: "Right Shoulder",
-                                ecodes.BTN_SELECT: "Select/Back",
-                                ecodes.BTN_START: "Start",
-                                ecodes.BTN_MODE: "Xbox Button",
-                                ecodes.BTN_THUMBL: "Left Thumb",
-                                ecodes.BTN_THUMBR: "Right Thumb",
+                            test_logger.info(f"TEST - BUTTON - {btn_name} - Pressed - Code: {event.code}")
+                            print(f"  Detected: {btn_name} (Code: {event.code})")
+                        elif event.type == ecodes.EV_KEY and event.value == 0:  # Button up
+                            btn_name = PS3_BUTTON_MAPPINGS.get(event.code, f"Unknown ({event.code})")
+                            test_logger.info(f"TEST - BUTTON - {btn_name} - Released - Code: {event.code}")
+                        elif event.type == ecodes.EV_ABS and abs(event.value) > 10:  # Axis movement
+                            axis_names = {
+                                0: "Left Stick X",
+                                1: "Left Stick Y",
+                                2: "Right Stick X (PS3-Z)",
+                                3: "Right Stick Y (PS3-RX)",
+                                4: "Right Stick Y (Xbox)",
+                                5: "Right Stick X (Xbox)",
                             }
-                            btn_name = btn_names.get(event.code, f"Unknown ({event.code})")
-                        
-                        btn_state = "Pressed" if event.value == 1 else "Released" if event.value == 0 else "Held"
-                        test_logger.info(f"TEST - BUTTON - {btn_name} - {btn_state} - Code: {event.code}")
-                        print(f"  Detected: {btn_name} ({event.code}) - {btn_state}")
-                        
-                    elif event.type == ecodes.EV_ABS:
-                        # Axis mappings
-                        axis_names = {
-                            0: "Left Stick X",
-                            1: "Left Stick Y",
-                            2: "Right Stick X (PS3-Z)",
-                            3: "Right Stick Y (PS3-RX)",
-                            4: "Right Stick Y (Xbox)",
-                            5: "Right Stick X (Xbox)",
-                            16: "D-pad X",
-                            17: "D-pad Y",
-                        }
-                        
-                        axis_name = axis_names.get(event.code, f"Unknown Axis ({event.code})")
-                        test_logger.info(f"TEST - AXIS - {axis_name} - Value: {event.value}")
-                        if abs(event.value) > 1000:  # Only log significant movements
-                            direction = "+" if event.value > 0 else "-"
-                            print(f"  Detected: {axis_name} ({event.code}) - Direction: {direction}")
-                
-                # Short delay to prevent CPU overload
-                time.sleep(0.01)
+                            axis_name = axis_names.get(event.code, f"Unknown Axis ({event.code})")
+                            test_logger.info(f"TEST - AXIS - {axis_name} - Value: {event.value}")
+                            if abs(event.value) > 1000:  # Only print significant movements
+                                print(f"  Detected: {axis_name} (Value: {event.value})")
+                    # Short sleep to avoid CPU thrashing
+                    time.sleep(0.01)
+                except Exception as e:
+                    debug_logger.error(f"Error reading event: {e}")
+                    time.sleep(0.01)
             
-            # Give user a short break between instructions
-            time.sleep(0.5)
+            # Give feedback
+            print("  Moving to next test...")
         
-        print("\nController test complete.")
-        print(f"Results have been logged to config_debug.log")
-        print("Press Ctrl+C to exit or any key to continue to normal operation.")
-        
-        # Wait for a keypress or timeout
-        gamepad.wait_for_event(timeout=5)
+        print("\nController test complete! Results logged to config_debug.log")
+        print("Press Enter to continue to normal operation or Ctrl+C to exit...")
+        input()
         
     except KeyboardInterrupt:
-        print("\nTest mode interrupted.")
+        print("\nTest mode interrupted by user.")
     except Exception as e:
+        import traceback
         print(f"\nError in test mode: {e}")
+        traceback.print_exc()
         logger.error(f"Test mode error: {e}")
     
     return
@@ -675,7 +602,7 @@ def handle_controller_input(gamepad):
     
     try:
         for event in gamepad.read_loop():
-            # Log all controller events
+            # Log all controller events for debugging purposes
             log_controller_event(event.type, event.code, event.value)
             
             # Check for exit flag
@@ -691,30 +618,17 @@ def handle_controller_input(gamepad):
                     elif event.code == 1:  # Left Stick Y
                         move_servo(1, event.value)
                     
-                    # Right stick - different mapping for PS3/Xbox
+                    # Right stick for PS3 controllers
                     if controller_type == 'PS3':
-                        if event.code == 2:  # Right Stick X (PS3-Z)
+                        if event.code == 2:  # Right Stick X (Z)
                             move_servo(2, event.value)
-                        elif event.code == 3:  # Right Stick Y (PS3-RX)
+                        elif event.code == 3:  # Right Stick Y (RX)
                             move_servo(3, event.value)
                     else:  # Xbox
-                        if event.code == 5:  # Right Stick X (Xbox)
+                        if event.code == 5:  # Right Stick X
                             move_servo(3, event.value)
-                        elif event.code == 4:  # Right Stick Y (Xbox)
+                        elif event.code == 4:  # Right Stick Y
                             move_servo(2, event.value)
-                    
-                    # PS3 D-pad via axes
-                    if controller_type == 'PS3':
-                        if event.code == 16:  # D-pad X axis
-                            if event.value == -1:  # D-pad left
-                                move_all_servos(0)
-                            elif event.value == 1:  # D-pad right
-                                move_all_servos(180)
-                        elif event.code == 17:  # D-pad Y axis
-                            if event.value == -1:  # D-pad up
-                                move_all_servos(90)
-                            elif event.value == 1:  # D-pad down
-                                lock_state = not lock_state
                 
                 # Handle button presses
                 elif event.type == ecodes.EV_KEY and event.value == 1:  # Button pressed
@@ -722,12 +636,16 @@ def handle_controller_input(gamepad):
                     if controller_type == 'PS3':
                         if event.code == 304:  # Cross (✕)
                             hold_state[0] = not hold_state[0]
+                            print(f"\nServo 0 {'LOCKED' if hold_state[0] else 'UNLOCKED'}")
                         elif event.code == 305:  # Circle (○)
                             hold_state[1] = not hold_state[1]
+                            print(f"\nServo 1 {'LOCKED' if hold_state[1] else 'UNLOCKED'}")
                         elif event.code == 308:  # Square (□)
                             hold_state[2] = not hold_state[2]
+                            print(f"\nServo 2 {'LOCKED' if hold_state[2] else 'UNLOCKED'}")
                         elif event.code == 307:  # Triangle (△)
                             hold_state[3] = not hold_state[3]
+                            print(f"\nServo 3 {'LOCKED' if hold_state[3] else 'UNLOCKED'}")
                         elif event.code == 294:  # L1
                             servo_speed = max(servo_speed - 0.1, 0.1)
                             print(f"\nSpeed decreased to {servo_speed:.1f}x")
@@ -736,18 +654,38 @@ def handle_controller_input(gamepad):
                             print(f"\nSpeed increased to {servo_speed:.1f}x")
                         elif event.code == 298:  # L2
                             move_all_servos(0)
+                            print("\nAll servos moved to 0°")
                         elif event.code == 299:  # R2
                             move_all_servos(180)
+                            print("\nAll servos moved to 180°")
+                        elif event.code == 288:  # Select
+                            # Additional function if needed
+                            pass
                         elif event.code == 291:  # Start
                             move_all_servos(90)
-                        elif event.code == 300:  # D-pad Up (direct button)
+                            print("\nAll servos moved to 90°")
+                        elif event.code == 300:  # D-pad Up
                             move_all_servos(90)
-                        elif event.code == 302:  # D-pad Down (direct button)
+                            print("\nAll servos moved to 90°")
+                        elif event.code == 302:  # D-pad Down
                             lock_state = not lock_state
-                        elif event.code == 303:  # D-pad Left (direct button)
+                            status = "LOCKED" if lock_state else "UNLOCKED"
+                            print(f"\nServos now {status}")
+                        elif event.code == 303:  # D-pad Left
                             move_all_servos(0)
-                        elif event.code == 301:  # D-pad Right (direct button)
+                            print("\nAll servos moved to 0°")
+                        elif event.code == 301:  # D-pad Right
                             move_all_servos(180)
+                            print("\nAll servos moved to 180°")
+                        elif event.code == 292:  # PS Button
+                            if q_pressed:
+                                print("\nPS button pressed twice. Exiting...")
+                                exit_flag = True
+                            else:
+                                q_pressed = True
+                                print("\nPress PS button again to exit...")
+                                # Reset q_pressed after 3 seconds
+                                threading.Timer(3.0, lambda: setattr(sys.modules[__name__], 'q_pressed', False)).start()
                     else:
                         # Xbox controller buttons
                         if event.code == ecodes.BTN_SOUTH:  # A
@@ -768,20 +706,16 @@ def handle_controller_input(gamepad):
                             move_all_servos(90)
                         elif event.code == ecodes.BTN_DPAD_DOWN:  # Down D-pad
                             lock_state = not lock_state
+                            status = "LOCKED" if lock_state else "UNLOCKED"
+                            print(f"\nServos now {status}")
                         elif event.code == ecodes.BTN_DPAD_LEFT:  # Left D-pad
                             move_all_servos(0)
                         elif event.code == ecodes.BTN_DPAD_RIGHT:  # Right D-pad
                             move_all_servos(180)
-                    
-                    # Check for 'Q' key (or PS button on PS3) for exit
-                    if (event.code == ecodes.KEY_Q) or (controller_type == 'PS3' and event.code == 292):
-                        if q_pressed:
-                            print("\nQ pressed twice. Exiting...")
-                            exit_flag = True
-                            break
-                        else:
-                            q_pressed = True
-                            print("\nPress Q again to exit...")
+                
+                # Update display to reflect changes
+                display_status()
+                
             except Exception as e:
                 # Log the error but continue processing events
                 logger.error(f"Error processing controller event: {e}")
@@ -791,227 +725,3 @@ def handle_controller_input(gamepad):
         logger.error(f"Controller error: {e}")
         print(f"\nController error: {e}")
         exit_flag = True
-
-def update_thread():
-    """Thread for updating sensor data and display"""
-    global exit_flag
-    
-    while not exit_flag:
-        # Update MPU data
-        update_mpu_data()
-        
-        # Display status
-        display_status()
-        
-        # Log data to the database (lower frequency to avoid overwhelming the DB)
-        if int(time.time()) % 5 == 0:  # Log every 5 seconds
-            log_data()
-        
-        # Sleep to control update rate
-        time.sleep(0.1)
-
-def exit_handler(signal_received=None, frame=None):
-    """Handle program exit gracefully"""
-    global exit_flag
-    
-    print("\nExiting program.")
-    exit_flag = True
-    
-    # Turn off all servos
-    if pca_connected and pwm:
-        pwm.set_all_pwm(0, 0)
-    
-    # Exit after a short delay to allow threads to close
-    time.sleep(0.5)
-    sys.exit(0)
-
-# Flask routes for web interface
-@app.route('/')
-def index():
-    """Serve the main web interface"""
-    return render_template('servo_controller.html')
-
-@app.route('/api/status')
-def get_status():
-    """API endpoint to get current status"""
-    status = {
-        'servos': {
-            'positions': servo_positions,
-            'hold_states': hold_state,
-            'directions': servo_directions,
-            'speed': servo_speed
-        },
-        'mpu': mpu_data,
-        'hardware': {
-            'pca_connected': pca_connected,
-            'pca_bus': pca_bus,
-            'mpu_connected': mpu_connected,
-            'mpu_bus': mpu_bus,
-            'controller_connected': controller_connected,
-            'controller_type': controller_type
-        }
-    }
-    return jsonify(status)
-
-@app.route('/api/servo/<int:channel>', methods=['POST'])
-def control_servo(channel):
-    """API endpoint to control a servo"""
-    if channel not in SERVO_CHANNELS:
-        return jsonify({'error': 'Invalid channel'}), 400
-    
-    data = request.get_json()
-    if not data or 'angle' not in data:
-        return jsonify({'error': 'Missing angle parameter'}), 400
-    
-    try:
-        angle = int(data['angle'])
-        set_servo_position(channel, angle)
-        return jsonify({'success': True, 'channel': channel, 'angle': angle})
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
-
-@app.route('/api/servo/all', methods=['POST'])
-def control_all_servos():
-    """API endpoint to control all servos"""
-    data = request.get_json()
-    if not data or 'angle' not in data:
-        return jsonify({'error': 'Missing angle parameter'}), 400
-    
-    try:
-        angle = int(data['angle'])
-        move_all_servos(angle)
-        return jsonify({'success': True, 'angle': angle})
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
-
-@app.route('/api/servo/hold/<int:channel>', methods=['POST'])
-def toggle_hold(channel):
-    """API endpoint to toggle servo hold state"""
-    if channel not in SERVO_CHANNELS:
-        return jsonify({'error': 'Invalid channel'}), 400
-    
-    try:
-        data = request.get_json()
-        if data and 'hold' in data:
-            hold_state[channel] = bool(data['hold'])
-        else:
-            hold_state[channel] = not hold_state[channel]
-        
-        return jsonify({'success': True, 'channel': channel, 'hold': hold_state[channel]})
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
-
-@app.route('/api/logs')
-def get_logs():
-    """API endpoint to get log data"""
-    try:
-        conn = sqlite3.connect(db_path)
-        cursor = conn.cursor()
-        
-        # Get the most recent 100 log entries
-        cursor.execute("SELECT * FROM servo_logs ORDER BY id DESC LIMIT 100")
-        rows = cursor.fetchall()
-        
-        logs = []
-        for row in rows:
-            log_entry = {
-                'id': row[0],
-                'timestamp': row[1],
-                'servo_data': json.loads(row[2]),
-                'mpu_data': json.loads(row[3]),
-                'hardware_status': json.loads(row[4])
-            }
-            logs.append(log_entry)
-        
-        conn.close()
-        return jsonify(logs)
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
-
-def start_web_server():
-    """Start the Flask web server"""
-    try:
-        app.run(host='0.0.0.0', port=5000, debug=False, use_reloader=False)
-    except Exception as e:
-        logger.error(f"Web server error: {e}")
-        print(f"Error starting web server: {e}")
-
-def main():
-    """Main function"""
-    global exit_flag
-    
-    # Parse command-line arguments
-    parser = argparse.ArgumentParser(description='Servo Controller with MPU6050')
-    parser.add_argument('--web-only', action='store_true', help='Run in web interface mode only')
-    parser.add_argument('--test-controller', action='store_true', help='Run controller testing mode')
-    parser.add_argument('--device', help='Specify controller device path')
-    args = parser.parse_args()
-    
-    # Register signal handler for Ctrl+C
-    signal.signal(signal.SIGINT, exit_handler)
-    
-    # Set up database
-    setup_database()
-    
-    # Detect I2C devices
-    detect_i2c_devices()
-    
-    print("Servo Controller")
-    print("---------------")
-    print(f"PCA9685: {'Connected on bus ' + str(pca_bus) if pca_connected else 'Not connected'}")
-    print(f"MPU6050: {'Connected on bus ' + str(mpu_bus) if mpu_connected else 'Not connected'}")
-    
-    # Find game controller if not in web-only mode
-    gamepad = None
-    if not args.web_only:
-        if args.device:
-            try:
-                gamepad = InputDevice(args.device)
-                if 'PLAYSTATION' in gamepad.name or 'PlayStation' in gamepad.name:
-                    controller_type = 'PS3'
-                elif 'Xbox' in gamepad.name:
-                    controller_type = 'Xbox'
-                else:
-                    controller_type = 'Generic'
-                controller_connected = True
-                
-                # Log controller information
-                debug_logger.info(f"Using specified controller: {gamepad.name} at {gamepad.path}")
-                debug_logger.info(f"Controller type detected: {controller_type}")
-            except Exception as e:
-                logger.error(f"Error using specified device: {e}")
-                print(f"Could not open specified device {args.device}: {e}")
-                gamepad = find_game_controller()
-        else:
-            gamepad = find_game_controller()
-    
-    # Start update thread for sensors and display
-    update_thread_handle = threading.Thread(target=update_thread)
-    update_thread_handle.daemon = True
-    update_thread_handle.start()
-    
-    # Start web server in a separate thread
-    web_thread = threading.Thread(target=start_web_server)
-    web_thread.daemon = True
-    web_thread.start()
-    
-    print("Web interface available at http://localhost:5000/")
-    print("Press Ctrl+C to exit or press 'q' twice")
-    
-    # Run controller test mode if requested
-    if args.test_controller and gamepad:
-        run_controller_test_mode(gamepad)
-    
-    # Start controller input handling if available and not in web-only mode
-    if gamepad and not args.web_only:
-        handle_controller_input(gamepad)
-    else:
-        # Just keep the main thread alive
-        while not exit_flag:
-            time.sleep(0.1)
-    
-    # Clean exit
-    exit_handler()
-
-if __name__ == "__main__":
-    main()

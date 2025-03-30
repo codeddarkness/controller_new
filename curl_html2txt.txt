@@ -1,0 +1,93 @@
+
+
+
+****** Servo Controller ******
+***** Servo Control *****
+Servo 0 (Left/Right) Unlock
+90Â°
+â
+Servo 1 (Up/Down) Unlock
+90Â°
+â
+Servo 2 (Up/Down) Unlock
+90Â°
+â
+Servo 3 (Left/Right) Unlock
+90Â°
+â
+Global Controls
+All 0Â° All 90Â° All 180Â°
+***** MPU-6050 Data *****
+Accelerometer
+X-Axis: â 0.0 m/sÂ²
+Y-Axis: â 0.0 m/sÂ²
+Z-Axis: â 9.8 m/sÂ²
+Gyroscope
+X-Axis: 0.0 Â°/s
+Y-Axis: 0.0 Â°/s
+Z-Axis: 0.0 Â°/s
+Temperature
+**** 25.0 Â°C ****
+***** System Status *****
+Hardware Status
+PCA9685:      Disconnected
+MPU6050:      Disconnected
+Controller:   Disconnected
+Servo Speed: 1.0x
+System Logs Show Logs
+
+
+// Toggle log display $("#toggle-logs-btn").click(function() { const
+$logContainer = $("#log-container"); const $button = $(this); if
+($logContainer.hasClass("d-none")) { $logContainer.removeClass("d-none");
+$button.text("Hide Logs"); fetchLogs(); } else { $logContainer.addClass("d-
+none"); $button.text("Show Logs"); } }); // Global servo control buttons $
+("#btn-all-0").click(function() { moveAllServos(0); }); $("#btn-all-90").click
+(function() { moveAllServos(90); }); $("#btn-all-180").click(function()
+{ moveAllServos(180); }); // Hold toggle buttons for (let i = 0; i < 4; i++)
+{ $(`#hold-btn-${i}`).click(function() { toggleHold(i); }); } // Function to
+update servo position function updateServo(channel, angle) { fetch(`/api/servo/
+${channel}`, { method: 'POST', headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({ angle: angle }) }) .then(response => response.json())
+.then(data => { if (data.error) { console.error('Error:', data.error); } })
+.catch(error => { console.error('Error:', error); }); } // Function to move all
+servos function moveAllServos(angle) { fetch('/api/servo/all', { method:
+'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(
+{ angle: angle }) }) .then(response => response.json()) .then(data => { if
+(data.error) { console.error('Error:', data.error); } else { // Update all
+sliders for (let i = 0; i < 4; i++) { if (!holdState[i]) { $(`#slider-$
+{i}`).roundSlider('setValue', angle); $(`#angle-display-${i}`).text(angle +
+"Â°"); } } } }) .catch(error => { console.error('Error:', error); }); } /
+/ Function to toggle servo hold state function toggleHold(channel) { fetch(`/
+api/servo/hold/${channel}`, { method: 'POST', headers: { 'Content-Type':
+'application/json' }, body: JSON.stringify({}) }) .then(response =>
+response.json()) .then(data => { if (data.error) { console.error('Error:',
+data.error); } else { holdState[channel] = data.hold; const $button = $(`#hold-
+btn-${channel}`); if (data.hold) { $button.removeClass('btn-warning').addClass
+('btn-danger'); $button.text('Locked'); } else { $button.removeClass('btn-
+danger').addClass('btn-warning'); $button.text('Unlock'); } } }) .catch(error
+=> { console.error('Error:', error); }); } // Function to fetch logs function
+fetchLogs() { fetch('/api/logs') .then(response => response.json()) .then(data
+=> { if (data.error) { console.error('Error:', data.error); } else { const
+$logContent = $("#log-content"); $logContent.empty(); data.forEach(entry =>
+{ const timestamp = new Date(entry.timestamp).toLocaleString(); const $logEntry
+= $('
+'); $logEntry.append(`
+Timestamp: ${timestamp}
+`); $logEntry.append(`
+Servo Data: ${JSON.stringify(entry.servo_data)}
+`); $logEntry.append(`
+MPU Data: ${JSON.stringify(entry.mpu_data)}
+`); $logEntry.append(`
+Hardware Status: ${JSON.stringify(entry.hardware_status)}
+`); $logContent.append($logEntry); }); } }) .catch(error => { console.error
+('Error:', error); }); } // Function to update the UI with current status
+function updateUI(data) { // Update servo positions and directions for (let i =
+0; i < 4; i++) { if (!holdState[i]) { $(`#slider-${i}`).roundSlider('setValue',
+data.servos.positions[i]); $(`#angle-display-${i}`).text(data.servos.positions
+[i] + "Â°"); } $(`#direction-${i}`).text(directionArrows[data.servos.directions
+[i]]); // Update hold state holdState[i] = data.servos.hold_states[i]; const
+$button = $(`#hold-btn-${i}`); if (data.servos.hold_states[i])
+{ $button.removeClass('btn-warning').addClass('btn-danger'); $button.text
+('Locked'); } else { $button.removeClass('btn-danger').addClass('btn-warning');
+$button.text('Unlock'); }
