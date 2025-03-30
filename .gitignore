@@ -1,7 +1,9 @@
 servo_data.db
 backup*
 __pycache__/
+*.pyc
+*.pyo
 patches/
-config_debug.log
-debug.log
 *.log
+.DS_Store
+venv/
