@@ -716,23 +716,6 @@ def handle_controller_input(gamepad):
                                 break
                             else:
                                 q_pressed = True
-                                print("Press Q again to exit...")
-                
-                # Update display to reflect changes
-                display_status()
-                
-            except Exception as e:
-                # Log the error but continue processing events
-                logger.error(f"Error processing controller event: {e}")
-                debug_logger.error(f"ERROR - {e} - Event: {event}")
-    
-    except Exception as e:
-        logger.error(f"Controller error: {e}")
-        print(f"Controller error: {e}")
-        exit_flag = True
-                                break
-                            else:
-                                q_pressed = True
                                 print("
 Press PS button again to exit...")
                     else:
