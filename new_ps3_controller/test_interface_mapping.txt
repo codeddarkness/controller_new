@@ -1,0 +1,50 @@
+Axes : 			(range: high:32767, low:-32767)
+ 0 : left joystick X	(direction:value, left:- right:+)
+ 1 : left joystick Y 	(direction:value, up:-  down:+)
+ 2 : right joystick X	(direction:value, left:- right:+)
+ 3 : right joystick Y	(direction:value, reading:- up:- down:+)
+ 4 : -32767 static : unknown	
+ 5 :  32767 static : unknown
+ 6 :  32767 static : unknown
+ 7 : 0
+ 8 : 0
+ 9 : 0
+10 : 0
+11 : 0
+12 : 0
+13 : 0
+14 : 0
+15 : 0
+16 : 0
+17 : 0
+18 : 0
+19 : 0
+20 : 0
+21 : 0
+22 : 0
+23 : 0
+24 : 0
+25 : 0
+26 : 0
+27 : 0
+28 : 0
+
+Buttons :
+ 0 : select button
+ 1 : left joystick button
+ 2 : right joystick button
+ 3 : start button
+ 4 : dpad up
+ 5 : dpad right
+ 6 : dpad down
+ 7 : dpad left
+ 8 : left trigger
+ 9 : right trigger
+ 10 : left shoulder
+ 11 : right shoulder
+ 12 : triangle button
+ 13 : circle button
+ 14 : X button
+ 15 : square
+ 16 : ps3 button/power
+
