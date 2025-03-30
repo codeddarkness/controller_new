@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 """
 Servo Controller for Raspberry Pi
 Supports PS3 and Xbox controllers for manipulating servos via PCA9685
@@ -1111,12 +1110,12 @@ def main():
     
     # Parse command-line arguments
     parser = argparse.ArgumentParser(description='Servo Controller with PS3/Xbox support')
-    parser.add_argument('--help', '-h', action='store_true', help='Show help')
     parser.add_argument('--test-hardware', action='store_true', help='Run hardware tests')
     parser.add_argument('--test-controller', action='store_true', help='Run controller testing mode')
     parser.add_argument('--device', help='Specify controller device path')
     parser.add_argument('--list-devices', action='store_true', help='List available input devices')
     parser.add_argument('--web-only', action='store_true', help='Run in web interface mode only')
+    parser.add_argument('--show-help', action='store_true', help='Show detailed help')
     args = parser.parse_args()
     
     # Register signal handler for Ctrl+C
@@ -1129,7 +1128,7 @@ def main():
     print("=====================================")
     
     # Show help if requested
-    if args.help:
+    if args.show_help:
         show_help()
         sys.exit(0)
     
