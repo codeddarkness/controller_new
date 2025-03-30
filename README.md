@@ -1,197 +1,234 @@
-# Servo Controller Project
+# Servo Controller for Raspberry Pi
 
-## Overview
-
-This project provides a web-based and controller-based interface for controlling four servo motors using a Raspberry Pi with a PCA9685 servo driver and an MPU6050 accelerometer/gyroscope. It supports PlayStation 3 and Xbox controllers, as well as a browser-based interface.
+A comprehensive servo control system for Raspberry Pi, supporting PlayStation 3 and Xbox controllers.
 
 ## Features
 
-- **Multi-controller support**: Works with PlayStation 3 and Xbox controllers
-- **Web Interface**: Control servos from any browser on your network
-- **Accelerometer data**: Monitor MPU6050 motion sensor data in real-time
-- **Servo position locking**: Lock individual servos in place
-- **Database logging**: Log all servo movements and sensor data
-- **Debug mode**: Runs in simulation mode if hardware isn't available
+- Support for both PS3 and Xbox controllers
+- Control up to 4 servos using the PCA9685 PWM controller
+- Motion sensing with MPU6050 (optional)
+- Hardware testing and diagnostics
+- Controller button mapping testing
+- Automatic device detection
+- Data logging to SQLite database
+- Simple status display in console
 
 ## Hardware Requirements
 
-- Raspberry Pi (3/4/Zero W recommended)
-- PCA9685 16-channel servo controller
-- MPU6050 accelerometer/gyroscope
-- 4 servo motors
-- PlayStation 3 or Xbox controller (USB or Bluetooth)
+- Raspberry Pi (any model with I2C support)
+- PCA9685 PWM controller board
+- Servo motors (up to 4)
+- PlayStation 3 or Xbox controller (wired or bluetooth)
+- MPU6050 accelerometer/gyroscope (optional)
 
-## Installation
+## Software Dependencies
 
-1. **Install required packages**:
-   ```bash
-   sudo apt-get update
-   sudo apt-get install -y python3-pip python3-dev i2c-tools joystick
-   pip3 install flask evdev adafruit-pca9685 mpu6050-raspberrypi
-   ```
+Install the required Python libraries:
 
-2. **Enable I2C on your Raspberry Pi**:
-   ```bash
-   sudo raspi-config
-   # Navigate to Interface Options → I2C → Enable
-   ```
+```bash
+# Update system packages
+sudo apt update
+sudo apt upgrade
 
-3. **Test I2C connection**:
-   ```bash
-   sudo i2cdetect -y 1
-   # You should see devices at address 0x40 (PCA9685) and 0x68 (MPU6050)
-   ```
+# Install required system dependencies
+sudo apt install -y python3-pip python3-dev i2c-tools joystick
 
-4. **Clone this repository**:
-   ```bash
-   git clone https://github.com/yourusername/servo-controller.git
-   cd servo-controller
-   ```
+# Enable I2C if not already enabled
+sudo raspi-config nonint do_i2c 0
+
+# Install Python libraries
+sudo pip3 install evdev
+sudo pip3 install Adafruit_PCA9685
+sudo pip3 install mpu6050-raspberrypi
+```
+
+## Controller Setup
+
+For PS3 controllers, you can use the included `ps3_controller_setup.sh` script to set up your controller:
+
+```bash
+chmod +x ps3_controller_setup.sh
+sudo ./ps3_controller_setup.sh
+```
 
 ## Usage
 
-### Starting the Controller
+### Basic Usage
 
-Basic usage:
 ```bash
-python3 servo_controller.py
+# Run the controller with auto-detection
+sudo python3 servo_controller.py
+
+# Specify a controller device
+sudo python3 servo_controller.py --device /dev/input/event3
 ```
 
-Command line options:
+### Command Line Options
+
+- `--help`, `-h`: Show help message
+- `--test-hardware`: Run hardware diagnostic tests
+- `--test-controller`: Run controller button mapping test
+- `--device PATH`: Specify a controller device path
+- `--list-devices`: List available input devices
+- `--web-only`: Run in web interface mode only
+
+### Control Mappings
+
+#### Joysticks
+
+| Joystick      | Function                            |
+|---------------|-------------------------------------|
+| Left Stick X  | Control Servo Channel 0             |
+| Left Stick Y  | Control Servo Channel 1             |
+| Right Stick X | Control Servo Channel 2             |
+| Right Stick Y | Control Servo Channel 3             |
+
+#### PS3 Controller Buttons
+
+| Button          | Function                        |
+|-----------------|----------------------------------|
+| Cross (✕)       | Toggle hold for Servo 0         |
+| Circle (○)      | Toggle hold for Servo 1         |
+| Square (□)      | Toggle hold for Servo 2         |
+| Triangle (△)    | Toggle hold for Servo 3         |
+| L1              | Decrease servo speed            |
+| R1              | Increase servo speed            |
+| L2              | Move all servos to 0°           |
+| R2              | Move all servos to 180°         |
+| D-pad Up        | Move all servos to 90°          |
+| D-pad Down      | Toggle lock for all servos      |
+| D-pad Left      | Move all servos to 0°           |
+| D-pad Right     | Move all servos to 180°         |
+| Select          | Function available for custom use|
+| Start           | Move all servos to 90°          |
+| PS Button (2x)  | Exit program                    |
+
+#### Xbox Controller Buttons
+
+| Button              | Function                        |
+|---------------------|----------------------------------|
+| A                   | Toggle hold for Servo 0         |
+| X                   | Toggle hold for Servo 1         |
+| B                   | Toggle hold for Servo 2         |
+| Y                   | Toggle hold for Servo 3         |
+| Left Shoulder (LB)  | Decrease servo speed            |
+| Right Shoulder (RB) | Increase servo speed            |
+| Left Trigger (LT)   | Move all servos to 0°           |
+| Right Trigger (RT)  | Move all servos to 180°         |
+| D-pad Up            | Move all servos to 90°          |
+| D-pad Down          | Toggle lock for all servos      |
+| D-pad Left          | Move all servos to 0°           |
+| D-pad Right         | Move all servos to 180°         |
+| Select/Back         | Function available for custom use|
+| Start               | Move all servos to 90°          |
+| Xbox Button (2x)    | Exit program                    |
+
+## Console Display
+
+The console display shows a compact, single-line status of all system components:
+
+- Servo positions with direction indicators (→,←,↑,↓,○)
+- Servo lock status
+- MPU6050 accelerometer data with direction indicators
+- Hardware connection status
+- Controller type
+- Servo speed setting
+
+Example:
 ```
---web-only        Run in web interface mode only (no controller)
---device PATH     Specify controller device path
---test-controller Run controller testing mode
---list-devices    List available input devices
+S0:→45°  S1:↑90°  S2:○180°L S3:↓30°  | MPU:X:→0.5 Y:↑0.3 Z:○9.8 | PCA:ON MPU:ON Ctrl:PS3 Spd:1.0x
 ```
 
-Examples:
+## Testing Features
+
+### Controller Testing
+
+Run the controller test mode to identify and verify button/axis mappings:
+
 ```bash
-# Start with specific controller device
-python3 servo_controller.py --device /dev/input/event0
-
-# Web interface only (no controller)
-python3 servo_controller.py --web-only
-
-# Test controller buttons and mapping
-python3 servo_controller.py --test-controller
-
-# List available input devices
-python3 servo_controller.py --list-devices
+sudo python3 servo_controller.py --test-controller
 ```
 
-### Web Interface
+This will guide you through pressing different buttons and moving joysticks to verify proper functionality and log the button codes for debugging.
 
-The web interface is available at:
+### Hardware Testing
+
+Run comprehensive hardware tests for all components:
+
+```bash
+sudo python3 servo_controller.py --test-hardware
 ```
-http://[your-raspberry-pi-ip]:5000/
-```
 
-Features:
-- Circular sliders for each servo
-- Real-time MPU6050 data display
-- Hardware status monitoring
-- System logs viewer
+This will test:
+- I2C bus connectivity
+- PCA9685 connection and functionality
+- MPU6050 sensor (if available)
+- Controller connection
+- Servo movement on all channels
 
-### Controller Mappings
+## Logging
 
-#### PlayStation 3 Controller
+The program maintains several log files:
 
-- **Left Stick X**: Servo 0 (Left/Right)
-- **Left Stick Y**: Servo 1 (Up/Down)
-- **Right Stick X**: Servo 2 (Left/Right)
-- **Right Stick Y**: Servo 3 (Up/Down)
-- **Cross (✕)**: Toggle Servo 0 lock
-- **Circle (○)**: Toggle Servo 1 lock
-- **Square (□)**: Toggle Servo 2 lock
-- **Triangle (△)**: Toggle Servo 3 lock
-- **L1**: Decrease servo speed
-- **R1**: Increase servo speed
-- **L2**: Move all servos to 0°
-- **R2**: Move all servos to 180°
-- **D-Pad Up**: Move all servos to 90°
-- **D-Pad Down**: Toggle global lock
-- **D-Pad Left**: Move all servos to 0°
-- **D-Pad Right**: Move all servos to 180°
-- **PS Button** (double-press): Exit program
+- `logs/servo_controller.log`: Main application logs
+- `logs/debug.log`: Detailed operational logs
+- `logs/config_debug.log`: Controller testing logs
 
-#### Xbox Controller
-
-- **Left Stick X**: Servo 0
-- **Left Stick Y**: Servo 1
-- **Right Stick Y**: Servo 2
-- **Right Stick X**: Servo 3
-- **A Button**: Toggle Servo 0 lock
-- **B Button**: Toggle Servo 1 lock
-- **X Button**: Toggle Servo 2 lock
-- **Y Button**: Toggle Servo 3 lock
-- **Left Shoulder**: Decrease speed
-- **Right Shoulder**: Increase speed
-- **D-pad Left**: Move all servos to 0°
-- **D-pad Right**: Move all servos to 180°
-- **D-pad Up**: Move all servos to 90°
-- **D-pad Down**: Toggle global lock
+Data is also stored in an SQLite database (`servo_data.db`) with the following tables:
+- `servo_logs`: Periodic logs of servo positions, MPU data, and hardware status
+- `test_results`: Results from hardware and controller tests
 
 ## Troubleshooting
 
-### Controller Issues
+### Controller Not Detected
 
-1. **Controller not detected**:
-   - Check if the controller is powered on
-   - Try a different USB port
-   - List available devices: `python3 servo_controller.py --list-devices`
-   - Specify device manually: `python3 servo_controller.py --device /dev/input/event0`
+1. Check if the controller is properly connected or paired
+2. Use `--list-devices` to see available input devices:
+   ```bash
+   sudo python3 servo_controller.py --list-devices
+   ```
+3. Specify the device path manually:
+   ```bash
+   sudo python3 servo_controller.py --device /dev/input/eventX
+   ```
 
-2. **Wrong button mapping**:
-   - Run test mode: `python3 servo_controller.py --test-controller`
-   - Check debug.log and config_debug.log for button codes
-   - Update PS3_BUTTON_MAPPINGS in the config.py if needed
+### PCA9685 or MPU6050 Not Detected
 
-### Hardware Issues
+1. Check I2C connections and power
+2. Verify I2C is enabled on your Raspberry Pi:
+   ```bash
+   sudo raspi-config
+   ```
+3. Check I2C devices:
+   ```bash
+   sudo i2cdetect -y 1
+   ```
 
-1. **PCA9685 not detected**:
-   - Check I2C connections and addresses: `sudo i2cdetect -y 1`
-   - Verify that I2C is enabled: `sudo raspi-config`
-   - Check power supply to PCA9685
+### Permission Issues
 
-2. **MPU6050 not working**:
-   - Check I2C connections
-   - Verify address (usually 0x68)
-   - Try different I2C bus if available
-
-3. **Servos not responding**:
-   - Check power supply (servos need 5-6V with adequate current)
-   - Verify servo connections to PCA9685
-   - Common issue: Insufficient power can cause erratic behavior
-
-### Web Interface Issues
-
-1. **Can't access web interface**:
-   - Check that the Flask server started successfully
-   - Verify your Raspberry Pi's IP address: `hostname -I`
-   - Check for firewall issues: `sudo ufw status`
-
-## Project Structure
-
-```
-.
-├── servo_controller.py        # Main application file
-├── config.py                  # Configuration settings
-├── hardware.py                # Hardware interface for servos and sensors
-├── controller_input.py        # Controller input handling
-├── database.py                # Database functionality for logging
-├── display.py                 # Console display functions
-├── logger.py                  # Logging configuration
-├── web_interface.py           # Web server and API
-├── test_mode.py               # Controller testing functionality
-├── templates/                 # Web templates directory
-│   └── servo_controller.html  # Web interface template
-├── README.md                  # This documentation
-└── .gitignore                 # Git ignore file
+If you get permission errors, make sure to run the script with sudo:
+```bash
+sudo python3 servo_controller.py
 ```
 
-## Credits & License
+## Extending the Project
 
-This project is available under the MIT License.
+### Adding More Servos
 
-Created for educational and hobby purposes.
+Edit the `SERVO_CHANNELS` constant in the code to include additional servo channels (the PCA9685 supports up to 16).
+
+### Custom Button Mappings
+
+Modify the button mappings in the code:
+- `PS3_BUTTON_MAPPINGS` for PS3 controllers
+- `XBOX_BUTTON_MAPPINGS` for Xbox controllers
+
+## License
+
+This project is released under the MIT License.
+
+## Acknowledgments
+
+- The Adafruit PCA9685 library for servo control
+- The MPU6050 library for motion sensing
+- The evdev library for controller input
