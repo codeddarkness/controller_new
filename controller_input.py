@@ -1,8 +1,122 @@
-# Replace the existing controller handling with this updated version:
+#!/usr/bin/env python3
+"""
+Controller input handling for servo controller.
+"""
+
+import evdev
+from evdev import InputDevice, ecodes
+import time
+import sys
+
+from config import PS3_BUTTON_MAPPINGS, PS3_AXIS_MAPPINGS
+from logger import main_logger, debug_logger
+from hardware import (
+    move_servo, 
+    move_all_servos, 
+    servo_speed, 
+    hold_state, 
+    lock_state
+)
+
+# Controller state
+controller_type = None
+controller_connected = False
+q_pressed = False
+exit_flag = False
+
+def find_game_controller(device_path=None):
+    """Find and return a PlayStation or Xbox controller device"""
+    global controller_type, controller_connected
+    
+    try:
+        if device_path:
+            # Use specified device path
+            try:
+                device = InputDevice(device_path)
+                if 'PLAYSTATION' in device.name or 'PlayStation' in device.name:
+                    controller_type = 'PS3' if '3' in device.name else 'PS'
+                    controller_connected = True
+                    return device
+                elif 'Xbox' in device.name:
+                    controller_type = 'Xbox'
+                    controller_connected = True
+                    return device
+                else:
+                    controller_type = 'Generic'
+                    controller_connected = True
+                    main_logger.info(f"Generic controller found: {device.name}")
+                    return device
+            except Exception as e:
+                main_logger.error(f"Error using specified device: {e}")
+                print(f"Could not open specified device {device_path}: {e}")
+        
+        # Auto-detect controller
+        devices = [InputDevice(path) for path in evdev.list_devices()]
+        for device in devices:
+            if 'PLAYSTATION(R)3' in device.name or 'PlayStation 3' in device.name:
+                controller_type = 'PS3'
+                controller_connected = True
+                main_logger.info(f"PS3 controller found: {device.name}")
+                return device
+            elif 'PLAYSTATION' in device.name or 'PlayStation' in device.name:
+                controller_type = 'PS'
+                controller_connected = True
+                main_logger.info(f"PlayStation controller found: {device.name}")
+                return device
+            elif 'Xbox' in device.name:
+                controller_type = 'Xbox'
+                controller_connected = True
+                main_logger.info(f"Xbox controller found: {device.name}")
+                return device
+    except Exception as e:
+        main_logger.error(f"Error finding controller: {e}")
+    
+    main_logger.warning("No game controller found")
+    print("No game controller found. Using keyboard or web interface.")
+    return None
+
+def log_controller_event(event_type, code, value, description=""):
+    """Log controller events to debug.log"""
+    try:
+        if event_type == ecodes.EV_KEY:
+            # Log button events
+            btn_name = "Unknown"
+            if controller_type == 'PS3' or controller_type == 'PS':
+                btn_name = PS3_BUTTON_MAPPINGS.get(code, f"Unknown ({code})")
+            else:
+                # Xbox button names
+                btn_names = {
+                    ecodes.BTN_SOUTH: "A",
+                    ecodes.BTN_EAST: "B",
+                    ecodes.BTN_WEST: "X",
+                    ecodes.BTN_NORTH: "Y",
+                    ecodes.BTN_TL: "Left Shoulder",
+                    ecodes.BTN_TR: "Right Shoulder",
+                    ecodes.BTN_SELECT: "Select/Back",
+                    ecodes.BTN_START: "Start",
+                    ecodes.BTN_MODE: "Xbox Button",
+                    ecodes.BTN_THUMBL: "Left Thumb",
+                    ecodes.BTN_THUMBR: "Right Thumb",
+                }
+                btn_name = btn_names.get(code, f"Unknown ({code})")
+            
+            btn_state = "Pressed" if value == 1 else "Released" if value == 0 else "Held"
+            debug_logger.info(f"BUTTON - {btn_name} - {btn_state} - Code: {code}")
+            
+        elif event_type == ecodes.EV_ABS:
+            # Log joystick/axis events
+            axis_name = PS3_AXIS_MAPPINGS.get(code, f"Unknown Axis ({code})")
+            debug_logger.info(f"AXIS - {axis_name} - Value: {value}")
+        
+        # Add additional custom description if provided
+        if description:
+            debug_logger.info(f"INFO - {description}")
+    except Exception as e:
+        main_logger.error(f"Error logging controller event: {e}")
 
 def handle_controller_input(gamepad):
     """Process input from game controller"""
-    global hold_state, servo_speed, q_pressed, exit_flag, lock_state
+    global servo_speed, q_pressed, exit_flag, lock_state, hold_state
     
     debug_logger.info(f"Controller connected: {gamepad.name} ({controller_type})")
     
@@ -25,7 +139,7 @@ def handle_controller_input(gamepad):
                         move_servo(1, event.value)
                     
                     # Right stick for PS3 controllers
-                    if controller_type == 'PS3':
+                    if controller_type == 'PS3' or controller_type == 'PS':
                         if event.code == 2:  # Right Stick X (Z)
                             move_servo(2, event.value)
                         elif event.code == 3:  # Right Stick Y (RX)
@@ -39,7 +153,7 @@ def handle_controller_input(gamepad):
                 # Handle button presses
                 elif event.type == ecodes.EV_KEY and event.value == 1:  # Button pressed
                     # Handle PS3 controller buttons based on test log
-                    if controller_type == 'PS3':
+                    if controller_type == 'PS3' or controller_type == 'PS':
                         if event.code == 304:  # Cross (✕)
                             hold_state[0] = not hold_state[0]
                         elif event.code == 305:  # Circle (○)
@@ -77,7 +191,6 @@ def handle_controller_input(gamepad):
                             if q_pressed:
                                 print("\nPS button pressed twice. Exiting...")
                                 exit_flag = True
-                                break
                             else:
                                 q_pressed = True
                                 print("\nPress PS button again to exit...")
@@ -111,20 +224,39 @@ def handle_controller_input(gamepad):
                             if q_pressed:
                                 print("\nQ pressed twice. Exiting...")
                                 exit_flag = True
-                                break
                             else:
                                 q_pressed = True
                                 print("\nPress Q again to exit...")
                 
-                # Update display to reflect changes
-                display_status()
+                # Update display
+                from display import update_display
+                update_display()
                 
             except Exception as e:
                 # Log the error but continue processing events
-                logger.error(f"Error processing controller event: {e}")
+                main_logger.error(f"Error processing controller event: {e}")
                 debug_logger.error(f"ERROR - {e} - Event: {event}")
     
     except Exception as e:
-        logger.error(f"Controller error: {e}")
+        main_logger.error(f"Controller error: {e}")
         print(f"\nController error: {e}")
         exit_flag = True
+        
+def list_available_controllers():
+    """List all available input devices"""
+    print("Available input devices:")
+    for i, path in enumerate(evdev.list_devices()):
+        try:
+            device = evdev.InputDevice(path)
+            print(f"  {i+1}. {path}: {device.name}")
+        except:
+            print(f"  {i+1}. {path}: [Error accessing device]")
+    print("")
+
+def get_controller_status():
+    """Get current controller status"""
+    return {
+        'connected': controller_connected,
+        'type': controller_type,
+        'exit_flag': exit_flag
+    }
