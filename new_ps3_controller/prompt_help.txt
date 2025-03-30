@@ -1,0 +1,31 @@
+Playstation 3 Controller
+The Joysticks should be mapped to the servos.
+Channel 0 maps to the Left Joystick X axis
+Channel 3 maps to the Right Joystick X axis
+Channel 1 maps to the Left Joystick Y axis
+Channel 2 maps to the Right Joystick Y axis
+The buttons Triangle,Circle,Square,X should toggle the servo to lock in position.
+Channel 0 is toggled by the X(south) button
+Channel 1 is toggled by the Circle(west) button
+Channel 2 is toggled by the Square(east) button
+Channel 3 is toggled by the Triangle(north) button
+The left shoulder button should decrease the servo speed
+The right shoulder button should increase the servo speed
+The left trigger should move each servo to 180 based on trigger input
+The left trigger should move each servo to 180 based on trigger input
+
+
+Xbox controller - include the library to use a wired , wireless or bluetooth XBox controller.
+Channel 0 maps to the Left Joystick X axis
+Channel 3 maps to the Right Joystick X axis
+Channel 1 maps to the Left Joystick Y axis
+Channel 2 maps to the Right Joystick Y axis
+The buttons Y,X,B,A should toggle the servo to lock in position.
+Channel 0 is toggled by the A(south) button
+Channel 1 is toggled by the X(west) button
+Channel 2 is toggled by the B(east) button
+Channel 3 is toggled by the Y(north) button
+The left shoulder button should decrease the servo speed
+The right shoulder button should increase the servo speed
+The left trigger should move each servo to 180 based on trigger input
+The left trigger should move each servo to 180 based on trigger input
