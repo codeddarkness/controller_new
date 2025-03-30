@@ -42,15 +42,10 @@ This project provides a web-based and controller-based interface for controlling
    # You should see devices at address 0x40 (PCA9685) and 0x68 (MPU6050)
    ```
 
-4. **Clone or download this repository**:
+4. **Clone this repository**:
    ```bash
-   git clone https://github.com/username/controller_new.git
-   cd controller_new
-   ```
-
-5. **Run the fix script if needed**:
-   ```bash
-   python3 code-fix-script.py
+   git clone https://github.com/yourusername/servo-controller.git
+   cd servo-controller
    ```
 
 ## Usage
@@ -62,20 +57,41 @@ Basic usage:
 python3 servo_controller.py
 ```
 
-With specific controller device:
+Command line options:
+```
+--web-only        Run in web interface mode only (no controller)
+--device PATH     Specify controller device path
+--test-controller Run controller testing mode
+--list-devices    List available input devices
+```
+
+Examples:
 ```bash
+# Start with specific controller device
 python3 servo_controller.py --device /dev/input/event0
-```
 
-Web interface only (no controller):
-```bash
+# Web interface only (no controller)
 python3 servo_controller.py --web-only
+
+# Test controller buttons and mapping
+python3 servo_controller.py --test-controller
+
+# List available input devices
+python3 servo_controller.py --list-devices
 ```
 
-Test controller buttons and mapping:
-```bash
-python3 servo_controller.py --test-controller
+### Web Interface
+
+The web interface is available at:
 ```
+http://[your-raspberry-pi-ip]:5000/
+```
+
+Features:
+- Circular sliders for each servo
+- Real-time MPU6050 data display
+- Hardware status monitoring
+- System logs viewer
 
 ### Controller Mappings
 
@@ -116,19 +132,6 @@ python3 servo_controller.py --test-controller
 - **D-pad Up**: Move all servos to 90°
 - **D-pad Down**: Toggle global lock
 
-### Web Interface
-
-The web interface is available at:
-```
-http://[your-raspberry-pi-ip]:5000/
-```
-
-Features:
-- Circular sliders for each servo
-- Real-time MPU6050 data display
-- Hardware status monitoring
-- System logs viewer
-
 ## Troubleshooting
 
 ### Controller Issues
@@ -136,13 +139,13 @@ Features:
 1. **Controller not detected**:
    - Check if the controller is powered on
    - Try a different USB port
-   - List available devices: `python3 servo_controller.py --list`
+   - List available devices: `python3 servo_controller.py --list-devices`
    - Specify device manually: `python3 servo_controller.py --device /dev/input/event0`
 
 2. **Wrong button mapping**:
    - Run test mode: `python3 servo_controller.py --test-controller`
    - Check debug.log and config_debug.log for button codes
-   - Update PS3_BUTTON_MAPPINGS in the code if needed
+   - Update PS3_BUTTON_MAPPINGS in the config.py if needed
 
 ### Hardware Issues
 
@@ -156,6 +159,11 @@ Features:
    - Verify address (usually 0x68)
    - Try different I2C bus if available
 
+3. **Servos not responding**:
+   - Check power supply (servos need 5-6V with adequate current)
+   - Verify servo connections to PCA9685
+   - Common issue: Insufficient power can cause erratic behavior
+
 ### Web Interface Issues
 
 1. **Can't access web interface**:
@@ -163,14 +171,24 @@ Features:
    - Verify your Raspberry Pi's IP address: `hostname -I`
    - Check for firewall issues: `sudo ufw status`
 
-## File Structure
+## Project Structure
 
-- `servo_controller.py` - Main application file
-- `templates/servo_controller.html` - Web interface template
-- `debug.log` - Controller input logging
-- `config_debug.log` - Controller testing logs
-- `servo_data.db` - SQLite database for data logging
-- `backups/` - Automatic backups of the main script
+```
+.
+├── servo_controller.py        # Main application file
+├── config.py                  # Configuration settings
+├── hardware.py                # Hardware interface for servos and sensors
+├── controller_input.py        # Controller input handling
+├── database.py                # Database functionality for logging
+├── display.py                 # Console display functions
+├── logger.py                  # Logging configuration
+├── web_interface.py           # Web server and API
+├── test_mode.py               # Controller testing functionality
+├── templates/                 # Web templates directory
+│   └── servo_controller.html  # Web interface template
+├── README.md                  # This documentation
+└── .gitignore                 # Git ignore file
+```
 
 ## Credits & License
 
