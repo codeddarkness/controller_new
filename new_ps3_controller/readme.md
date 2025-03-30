@@ -1,6 +1,6 @@
 base_script.py                      ## CORE FUNCTIONALITY WITH XBOX SUPPORT
 keypress_order.txt                  ## Pre-defined button sequence to match to debug/testing logs ## REFERENCE
-prompt_help.txt                     ## Button mappings requested
+requested_button_mappings.txt                     ## Button mappings requested
 
 servo_controller.py                 ## reference program 
 controller_input.py                 ## Controller script for servo_controller.py
