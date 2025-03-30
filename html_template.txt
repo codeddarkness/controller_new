@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servo Controller</title>
+    <!-- Include RoundSlider CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .card {
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: none;
+        }
+        
+        .card-header {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .servo-slider {
+            margin: 20px auto;
+            width: 200px;
+            height: 200px;
+        }
+        
+        .servo-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+        }
+        
+        .rs-tooltip {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .status-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+        }
+        
+        .status-connected {
+            background-color: #28a745;
+        }
+        
+        .status-disconnected {
+            background-color: #dc3545;
+        }
+        
+        .arrow {
+            font-size: 20px;
+        }
+        
+        .hold-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 10;
+        }
+        
+        .log-container {
+            height: 400px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 12px;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border: 1px solid #dee2e6;
+            border-radius: 0.25rem;
+        }
+        
+        .log-entry {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .slider-container {
+            position: relative;
+        }
+        
+        .angle-display {
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .section-title {
+            margin-bottom: 20px;
+            padding: 10px 0;
+            border-bottom: 2px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Servo Controller</h1>
+        
+        <div class="row">
+            <!-- Servo Control Column -->
+            <div class="col-lg-4">
+                <h2 class="section-title">Servo Control</h2>
+                
+                <div class="row">
+                    <!-- Servo 0 -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                Servo 0 (Left/Right)
+                                <button id="hold-btn-0" class="btn btn-sm btn-warning hold-btn">Unlock</button>
+                            </div>
+                            <div class="card-body text-center">
+                                <div class="slider-container">
+                                    <div id="slider-0" class="servo-slider"></div>
+                                    <div id="angle-display-0" class="angle-display">90°</div>
+                                </div>
+                                <div id="direction-0" class="arrow mb-2">○</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Servo 1 -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                Servo 1 (Up/Down)
+                                <button id="hold-btn-1" class="btn btn-sm btn-warning hold-btn">Unlock</button>
+                            </div>
+                            <div class="card-body text-center">
+                                <div class="slider-container">
+                                    <div id="slider-1" class="servo-slider"></div>
+                                    <div id="angle-display-1" class="angle-display">90°</div>
+                                </div>
+                                <div id="direction-1" class="arrow mb-2">○</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Servo 2 -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                Servo 2 (Up/Down)
+                                <button id="hold-btn-2" class="btn btn-sm btn-warning hold-btn">Unlock</button>
+                            </div>
+                            <div class="card-body text-center">
+                                <div class="slider-container">
+                                    <div id="slider-2" class="servo-slider"></div>
+                                    <div id="angle-display-2" class="angle-display">90°</div>
+                                </div>
+                                <div id="direction-2" class="arrow mb-2">○</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Servo 3 -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                Servo 3 (Left/Right)
+                                <button id="hold-btn-3" class="btn btn-sm btn-warning hold-btn">Unlock</button>
+                            </div>
+                            <div class="card-body text-center">
+                                <div class="slider-container">
+                                    <div id="slider-3" class="servo-slider"></div>
+                                    <div id="angle-display-3" class="angle-display">90°</div>
+                                </div>
+                                <div id="direction-3" class="arrow mb-2">○</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Global Servo Controls -->
+                <div class="card">
+                    <div class="card-header">Global Controls</div>
+                    <div class="card-body">
+                        <div class="servo-buttons">
+                            <button id="btn-all-0" class="btn btn-primary">All 0°</button>
+                            <button id="btn-all-90" class="btn btn-success">All 90°</button>
+                            <button id="btn-all-180" class="btn btn-primary">All 180°</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- MPU Data Column -->
+            <div class="col-lg-4">
+                <h2 class="section-title">MPU-6050 Data</h2>
+                
+                <div class="card">
+                    <div class="card-header">Accelerometer</div>
+                    <div class="card-body">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>X-Axis:</td>
+                                    <td><span id="accel-x-arrow" class="arrow">○</span> <span id="accel-x-value">0.0</span> m/s²</td>
+                                </tr>
+                                <tr>
+                                    <td>Y-Axis:</td>
+                                    <td><span id="accel-y-arrow" class="arrow">○</span> <span id="accel-y-value">0.0</span> m/s²</td>
+                                </tr>
+                                <tr>
+                                    <td>Z-Axis:</td>
+                                    <td><span id="accel-z-arrow" class="arrow">○</span> <span id="accel-z-value">9.8</span> m/s²</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">Gyroscope</div>
+                    <div class="card-body">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>X-Axis:</td>
+                                    <td><span id="gyro-x-value">0.0</span> °/s</td>
+                                </tr>
+                                <tr>
+                                    <td>Y-Axis:</td>
+                                    <td><span id="gyro-y-value">0.0</span> °/s</td>
+                                </tr>
+                                <tr>
+                                    <td>Z-Axis:</td>
+                                    <td><span id="gyro-z-value">0.0</span> °/s</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">Temperature</div>
+                    <div class="card-body">
+                        <h3 class="text-center"><span id="temperature-value">25.0</span> °C</h3>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Status & Logs Column -->
+            <div class="col-lg-4">
+                <h2 class="section-title">System Status</h2>
+                
+                <div class="card">
+                    <div class="card-header">Hardware Status</div>
+                    <div class="card-body">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>PCA9685:</td>
+                                    <td>
+                                        <span id="pca-status-indicator" class="status-indicator status-disconnected"></span>
+                                        <span id="pca-status">Disconnected</span>
+                                        <span id="pca-bus" class="text-muted"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>MPU6050:</td>
+                                    <td>
+                                        <span id="mpu-status-indicator" class="status-indicator status-disconnected"></span>
+                                        <span id="mpu-status">Disconnected</span>
+                                        <span id="mpu-bus" class="text-muted"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Controller:</td>
+                                    <td>
+                                        <span id="controller-status-indicator" class="status-indicator status-disconnected"></span>
+                                        <span id="controller-status">Disconnected</span>
+                                        <span id="controller-type" class="text-muted"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Servo Speed:</td>
+                                    <td><span id="servo-speed">1.0</span>x</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        System Logs
+                        <button id="toggle-logs-btn" class="btn btn-sm btn-primary">Show Logs</button>
+                    </div>
+                    <div class="card-body">
+                        <div id="log-container" class="log-container d-none">
+                            <div id="log-content"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- RoundSlider JS -->
+    <script src="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Initialize servo sliders
+        for (let i = 0; i < 4; i++) {
+            $(`#slider-${i}`).roundSlider({
+                radius: 80,
+                width: 10,
+                handleSize: "+16",
+                handleShape: "dot",
+                sliderType: "min-range",
+                value: 90,
+                min: 0,
+                max: 180,
+                step: 1,
+                startAngle: 90,
+                change: function(e) {
+                    updateServo(i, e.value);
+                },
+                drag: function(e) {
+                    $(`#angle-display-${i}`).text(e.value + "°");
+                }
+            });
+                    }
+            
+            // Update MPU data
+            $("#accel-x-arrow").text(directionArrows[data.mpu.direction.x]);
+            $("#accel-y-arrow").text(directionArrows[data.mpu.direction.y]);
+            $("#accel-z-arrow").text(directionArrows[data.mpu.direction.z]);
+            
+            $("#accel-x-value").text(data.mpu.accel.x.toFixed(1));
+            $("#accel-y-value").text(data.mpu.accel.y.toFixed(1));
+            $("#accel-z-value").text(data.mpu.accel.z.toFixed(1));
+            
+            $("#gyro-x-value").text(data.mpu.gyro.x.toFixed(1));
+            $("#gyro-y-value").text(data.mpu.gyro.y.toFixed(1));
+            $("#gyro-z-value").text(data.mpu.gyro.z.toFixed(1));
+            
+            $("#temperature-value").text(data.mpu.temp.toFixed(1));
+            
+            // Update hardware status
+            if (data.hardware.pca_connected) {
+                $("#pca-status-indicator").removeClass("status-disconnected").addClass("status-connected");
+                $("#pca-status").text("Connected");
+                $("#pca-bus").text(`(Bus ${data.hardware.pca_bus})`);
+            } else {
+                $("#pca-status-indicator").removeClass("status-connected").addClass("status-disconnected");
+                $("#pca-status").text("Disconnected");
+                $("#pca-bus").text("");
+            }
+            
+            if (data.hardware.mpu_connected) {
+                $("#mpu-status-indicator").removeClass("status-disconnected").addClass("status-connected");
+                $("#mpu-status").text("Connected");
+                $("#mpu-bus").text(`(Bus ${data.hardware.mpu_bus})`);
+            } else {
+                $("#mpu-status-indicator").removeClass("status-connected").addClass("status-disconnected");
+                $("#mpu-status").text("Disconnected");
+                $("#mpu-bus").text("");
+            }
+            
+            if (data.hardware.controller_connected) {
+                $("#controller-status-indicator").removeClass("status-disconnected").addClass("status-connected");
+                $("#controller-status").text("Connected");
+                $("#controller-type").text(`(${data.hardware.controller_type})`);
+            } else {
+                $("#controller-status-indicator").removeClass("status-connected").addClass("status-disconnected");
+                $("#controller-status").text("Disconnected");
+                $("#controller-type").text("");
+            }
+            
+            // Update servo speed
+            $("#servo-speed").text(data.servos.speed.toFixed(1));
+        }
+        
+        // Fetch status every 100ms
+        setInterval(function() {
+            fetch('/api/status')
+            .then(response => response.json())
+            .then(data => {
+                updateUI(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }, 100);
+    </script>
+</body>
+</html>
+        
+        // Toggle log display
+        $("#toggle-logs-btn").click(function() {
+            const $logContainer = $("#log-container");
+            const $button = $(this);
+            
+            if ($logContainer.hasClass("d-none")) {
+                $logContainer.removeClass("d-none");
+                $button.text("Hide Logs");
+                fetchLogs();
+            } else {
+                $logContainer.addClass("d-none");
+                $button.text("Show Logs");
+            }
+        });
+        
+        // Global servo control buttons
+        $("#btn-all-0").click(function() {
+            moveAllServos(0);
+        });
+        
+        $("#btn-all-90").click(function() {
+            moveAllServos(90);
+        });
+        
+        $("#btn-all-180").click(function() {
+            moveAllServos(180);
+        });
+        
+        // Hold toggle buttons
+        for (let i = 0; i < 4; i++) {
+            $(`#hold-btn-${i}`).click(function() {
+                toggleHold(i);
+            });
+        }
+        
+        // Function to update servo position
+        function updateServo(channel, angle) {
+            fetch(`/api/servo/${channel}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ angle: angle })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    console.error('Error:', data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+        
+        // Function to move all servos
+        function moveAllServos(angle) {
+            fetch('/api/servo/all', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ angle: angle })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    console.error('Error:', data.error);
+                } else {
+                    // Update all sliders
+                    for (let i = 0; i < 4; i++) {
+                        if (!holdState[i]) {
+                            $(`#slider-${i}`).roundSlider('setValue', angle);
+                            $(`#angle-display-${i}`).text(angle + "°");
+                        }
+                    }
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+        
+        // Function to toggle servo hold state
+        function toggleHold(channel) {
+            fetch(`/api/servo/hold/${channel}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({})
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    console.error('Error:', data.error);
+                } else {
+                    holdState[channel] = data.hold;
+                    const $button = $(`#hold-btn-${channel}`);
+                    
+                    if (data.hold) {
+                        $button.removeClass('btn-warning').addClass('btn-danger');
+                        $button.text('Locked');
+                    } else {
+                        $button.removeClass('btn-danger').addClass('btn-warning');
+                        $button.text('Unlock');
+                    }
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+        
+        // Function to fetch logs
+        function fetchLogs() {
+            fetch('/api/logs')
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    console.error('Error:', data.error);
+                } else {
+                    const $logContent = $("#log-content");
+                    $logContent.empty();
+                    
+                    data.forEach(entry => {
+                        const timestamp = new Date(entry.timestamp).toLocaleString();
+                        
+                        const $logEntry = $('<div class="log-entry"></div>');
+                        $logEntry.append(`<div><strong>Timestamp:</strong> ${timestamp}</div>`);
+                        $logEntry.append(`<div><strong>Servo Data:</strong> ${JSON.stringify(entry.servo_data)}</div>`);
+                        $logEntry.append(`<div><strong>MPU Data:</strong> ${JSON.stringify(entry.mpu_data)}</div>`);
+                        $logEntry.append(`<div><strong>Hardware Status:</strong> ${JSON.stringify(entry.hardware_status)}</div>`);
+                        
+                        $logContent.append($logEntry);
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+        
+        // Function to update the UI with current status
+        function updateUI(data) {
+            // Update servo positions and directions
+            for (let i = 0; i < 4; i++) {
+                if (!holdState[i]) {
+                    $(`#slider-${i}`).roundSlider('setValue', data.servos.positions[i]);
+                    $(`#angle-display-${i}`).text(data.servos.positions[i] + "°");
+                }
+                $(`#direction-${i}`).text(directionArrows[data.servos.directions[i]]);
+                
+                // Update hold state
+                holdState[i] = data.servos.hold_states[i];
+                const $button = $(`#hold-btn-${i}`);
+                
+                if (data.servos.hold_states[i]) {
+                    $button.removeClass('btn-warning').addClass('btn-danger');
+                    $button.text('Locked');
+                } else {
+                    $button.removeClass('btn-danger').addClass('btn-warning');
+                    $button.text('Unlock');
+                }
+            

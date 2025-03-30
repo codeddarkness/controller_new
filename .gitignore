@@ -1,0 +1,7 @@
+servo_data.db
+backup*
+__pycache__/
+patches/
+config_debug.log
+debug.log
+*.log

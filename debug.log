@@ -1,514 +1,1023 @@
-2025-03-29 20:36:25,841 - Controller connected: PLAYSTATION(R)3 Controller (38:C0:96:AC:ED:71) (PS3)
-2025-03-29 20:36:27,657 - BUTTON - L3 - Released - Code: 296
-2025-03-29 20:36:29,102 - AXIS - Left Stick X - Value: -10
-2025-03-29 20:36:29,161 - AXIS - Left Stick X - Value: 0
-2025-03-29 20:36:29,338 - AXIS - Left Stick Y - Value: 17
-2025-03-29 20:36:29,352 - AXIS - Left Stick Y - Value: 30
-2025-03-29 20:36:29,395 - AXIS - Left Stick X - Value: 44
-2025-03-29 20:36:29,398 - AXIS - Left Stick Y - Value: 95
-2025-03-29 20:36:29,407 - AXIS - Left Stick X - Value: 53
-2025-03-29 20:36:29,409 - AXIS - Left Stick Y - Value: 110
-2025-03-29 20:36:29,417 - AXIS - Left Stick X - Value: 62
-2025-03-29 20:36:29,419 - AXIS - Left Stick Y - Value: 122
-2025-03-29 20:36:29,457 - AXIS - Left Stick X - Value: 70
-2025-03-29 20:36:29,459 - AXIS - Left Stick Y - Value: 127
-2025-03-29 20:36:29,535 - AXIS - Left Stick X - Value: 52
-2025-03-29 20:36:29,581 - AXIS - Left Stick X - Value: -29
-2025-03-29 20:36:29,587 - AXIS - Left Stick X - Value: -50
-2025-03-29 20:36:29,635 - AXIS - Left Stick X - Value: -116
-2025-03-29 20:36:29,638 - AXIS - Left Stick Y - Value: 112
-2025-03-29 20:36:29,654 - AXIS - Left Stick X - Value: -127
-2025-03-29 20:36:29,656 - AXIS - Left Stick Y - Value: 96
-2025-03-29 20:36:29,697 - AXIS - Left Stick Y - Value: 76
-2025-03-29 20:36:29,709 - AXIS - Left Stick Y - Value: 64
-2025-03-29 20:36:29,757 - AXIS - Left Stick Y - Value: 0
-2025-03-29 20:36:29,774 - AXIS - Left Stick Y - Value: -11
-2025-03-29 20:36:29,778 - AXIS - Left Stick Y - Value: -28
-2025-03-29 20:36:29,818 - AXIS - Left Stick Y - Value: -72
-2025-03-29 20:36:29,828 - AXIS - Left Stick Y - Value: -91
-2025-03-29 20:36:29,839 - AXIS - Left Stick Y - Value: -103
-2025-03-29 20:36:29,874 - AXIS - Left Stick X - Value: -91
-2025-03-29 20:36:29,878 - AXIS - Left Stick Y - Value: -127
-2025-03-29 20:36:29,894 - AXIS - Left Stick X - Value: -52
-2025-03-29 20:36:29,947 - AXIS - Left Stick X - Value: 55
-2025-03-29 20:36:29,958 - AXIS - Left Stick X - Value: 68
-2025-03-29 20:36:29,999 - AXIS - Left Stick X - Value: 92
-2025-03-29 20:36:30,002 - AXIS - Left Stick Y - Value: -91
-2025-03-29 20:36:30,004 - AXIS - Left Stick X - Value: 96
-2025-03-29 20:36:30,006 - AXIS - Left Stick Y - Value: -73
-2025-03-29 20:36:30,013 - AXIS - Left Stick X - Value: 100
-2025-03-29 20:36:30,015 - AXIS - Left Stick Y - Value: -58
-2025-03-29 20:36:30,061 - AXIS - Left Stick X - Value: 105
-2025-03-29 20:36:30,063 - AXIS - Left Stick Y - Value: 10
-2025-03-29 20:36:30,078 - AXIS - Left Stick Y - Value: 26
-2025-03-29 20:36:30,127 - AXIS - Left Stick Y - Value: 93
-2025-03-29 20:36:30,137 - AXIS - Left Stick Y - Value: 109
-2025-03-29 20:36:30,183 - AXIS - Left Stick X - Value: 88
-2025-03-29 20:36:30,185 - AXIS - Left Stick Y - Value: 127
-2025-03-29 20:36:30,192 - AXIS - Left Stick X - Value: 78
-2025-03-29 20:36:30,247 - AXIS - Left Stick X - Value: 52
-2025-03-29 20:36:30,299 - AXIS - Left Stick X - Value: 27
-2025-03-29 20:36:30,359 - AXIS - Left Stick X - Value: 21
-2025-03-29 20:36:30,363 - AXIS - Left Stick Y - Value: 111
-2025-03-29 20:36:30,374 - AXIS - Left Stick Y - Value: 85
-2025-03-29 20:36:30,414 - AXIS - Left Stick X - Value: 0
-2025-03-29 20:36:30,417 - AXIS - Left Stick Y - Value: 0
-2025-03-29 20:36:30,595 - AXIS - Left Stick X - Value: 15
-2025-03-29 20:36:30,600 - AXIS - Left Stick Y - Value: -15
-2025-03-29 20:36:30,608 - AXIS - Left Stick X - Value: 24
-2025-03-29 20:36:30,611 - AXIS - Left Stick Y - Value: -37
-2025-03-29 20:36:30,663 - AXIS - Left Stick X - Value: 14
-2025-03-29 20:36:30,665 - AXIS - Left Stick Y - Value: -121
-2025-03-29 20:36:30,733 - AXIS - Left Stick X - Value: -66
-2025-03-29 20:36:30,736 - AXIS - Left Stick Y - Value: -127
-2025-03-29 20:36:30,777 - AXIS - Left Stick X - Value: -115
-2025-03-29 20:36:30,779 - AXIS - Left Stick Y - Value: -121
-2025-03-29 20:36:30,841 - AXIS - Left Stick X - Value: -127
-2025-03-29 20:36:30,843 - AXIS - Left Stick Y - Value: -68
-2025-03-29 20:36:30,845 - AXIS - Left Stick Y - Value: -56
-2025-03-29 20:36:30,860 - AXIS - Left Stick Y - Value: -45
-2025-03-29 20:36:30,901 - AXIS - Left Stick Y - Value: -34
-2025-03-29 20:36:30,919 - AXIS - Left Stick Y - Value: -35
-2025-03-29 20:36:30,961 - AXIS - Left Stick X - Value: 0
-2025-03-29 20:36:30,963 - AXIS - Left Stick Y - Value: 0
-2025-03-29 20:36:31,631 - AXIS - Left Stick Y - Value: 15
-2025-03-29 20:36:31,633 - AXIS - Left Stick Y - Value: 19
-2025-03-29 20:36:31,677 - AXIS - Left Stick X - Value: 16
-2025-03-29 20:36:31,679 - AXIS - Left Stick Y - Value: 28
-2025-03-29 20:36:31,820 - AXIS - Left Stick Y - Value: 26
-2025-03-29 20:36:31,878 - AXIS - Left Stick Y - Value: 25
-2025-03-29 20:36:31,915 - AXIS - Left Stick X - Value: 0
-2025-03-29 20:36:31,920 - AXIS - Left Stick Y - Value: 0
-2025-03-29 20:36:33,120 - BUTTON - Unknown (302) - Pressed - Code: 302
-2025-03-29 20:36:33,297 - BUTTON - Unknown (302) - Released - Code: 302
-2025-03-29 20:36:33,794 - BUTTON - Unknown (303) - Pressed - Code: 303
-2025-03-29 20:36:33,962 - BUTTON - Unknown (303) - Released - Code: 303
-2025-03-29 20:36:34,203 - BUTTON - Unknown (300) - Pressed - Code: 300
-2025-03-29 20:36:34,277 - BUTTON - Unknown (300) - Released - Code: 300
-2025-03-29 20:36:34,494 - BUTTON - Unknown (301) - Pressed - Code: 301
-2025-03-29 20:36:34,619 - BUTTON - Unknown (301) - Released - Code: 301
-2025-03-29 20:36:35,053 - AXIS - Left Stick Y - Value: 29
-2025-03-29 20:36:35,098 - AXIS - Left Stick Y - Value: 90
-2025-03-29 20:36:35,110 - AXIS - Left Stick Y - Value: 98
-2025-03-29 20:36:35,155 - AXIS - Left Stick Y - Value: 127
-2025-03-29 20:36:35,233 - AXIS - Left Stick X - Value: -11
-2025-03-29 20:36:35,278 - AXIS - Left Stick X - Value: -49
-2025-03-29 20:36:35,290 - AXIS - Left Stick X - Value: -56
-2025-03-29 20:36:35,332 - AXIS - Left Stick X - Value: -80
-2025-03-29 20:36:35,353 - AXIS - Left Stick X - Value: -97
-2025-03-29 20:36:35,357 - AXIS - Left Stick X - Value: -107
-2025-03-29 20:36:35,359 - AXIS - Left Stick Y - Value: 123
-2025-03-29 20:36:35,401 - AXIS - Left Stick X - Value: -127
-2025-03-29 20:36:35,403 - AXIS - Left Stick Y - Value: 94
-2025-03-29 20:36:35,453 - AXIS - Left Stick Y - Value: 65
-2025-03-29 20:36:35,475 - AXIS - Left Stick Y - Value: 48
-2025-03-29 20:36:35,515 - AXIS - Left Stick Y - Value: 26
-2025-03-29 20:36:35,533 - AXIS - Left Stick Y - Value: 16
-2025-03-29 20:36:35,537 - AXIS - Left Stick Y - Value: 0
-2025-03-29 20:36:35,577 - AXIS - Left Stick Y - Value: -12
-2025-03-29 20:36:35,581 - AXIS - Left Stick Y - Value: -17
-2025-03-29 20:36:35,593 - AXIS - Left Stick Y - Value: -20
-2025-03-29 20:36:35,635 - AXIS - Left Stick Y - Value: -38
-2025-03-29 20:36:35,638 - AXIS - Left Stick Y - Value: -44
-2025-03-29 20:36:35,660 - AXIS - Left Stick Y - Value: -54
-2025-03-29 20:36:35,718 - AXIS - Left Stick Y - Value: -67
-2025-03-29 20:36:35,755 - AXIS - Left Stick Y - Value: -68
-2025-03-29 20:36:35,818 - AXIS - Right Stick X (PS3-Z) - Value: -19
-2025-03-29 20:36:35,828 - AXIS - Right Stick X (PS3-Z) - Value: -25
-2025-03-29 20:36:35,830 - AXIS - Right Stick Y (PS3-RX) - Value: 13
-2025-03-29 20:36:35,887 - AXIS - Left Stick Y - Value: -67
-2025-03-29 20:36:35,889 - AXIS - Right Stick X (PS3-Z) - Value: -58
-2025-03-29 20:36:35,891 - AXIS - Right Stick Y (PS3-RX) - Value: 32
-2025-03-29 20:36:35,954 - AXIS - Left Stick Y - Value: -66
-2025-03-29 20:36:35,956 - AXIS - Right Stick X (PS3-Z) - Value: -94
-2025-03-29 20:36:35,958 - AXIS - Right Stick Y (PS3-RX) - Value: 41
-2025-03-29 20:36:36,004 - AXIS - Left Stick Y - Value: -65
-2025-03-29 20:36:36,011 - AXIS - Right Stick X (PS3-Z) - Value: -114
-2025-03-29 20:36:36,013 - AXIS - Right Stick Y (PS3-RX) - Value: 49
-2025-03-29 20:36:36,016 - AXIS - Left Stick Y - Value: -64
-2025-03-29 20:36:36,018 - AXIS - Right Stick X (PS3-Z) - Value: -122
-2025-03-29 20:36:36,020 - AXIS - Right Stick Y (PS3-RX) - Value: 53
-2025-03-29 20:36:36,058 - AXIS - Left Stick Y - Value: -59
-2025-03-29 20:36:36,060 - AXIS - Right Stick X (PS3-Z) - Value: -127
-2025-03-29 20:36:36,062 - AXIS - Right Stick Y (PS3-RX) - Value: 55
-2025-03-29 20:36:36,065 - AXIS - Left Stick Y - Value: -57
-2025-03-29 20:36:36,067 - AXIS - Right Stick Y (PS3-RX) - Value: 54
-2025-03-29 20:36:36,077 - AXIS - Left Stick Y - Value: -53
-2025-03-29 20:36:36,079 - AXIS - Right Stick Y (PS3-RX) - Value: 49
-2025-03-29 20:36:36,137 - AXIS - Left Stick Y - Value: -37
-2025-03-29 20:36:36,139 - AXIS - Right Stick Y (PS3-RX) - Value: 34
-2025-03-29 20:36:36,177 - AXIS - Left Stick Y - Value: -14
-2025-03-29 20:36:36,180 - AXIS - Right Stick Y (PS3-RX) - Value: 0
-2025-03-29 20:36:36,195 - AXIS - Left Stick Y - Value: 0
-2025-03-29 20:36:36,237 - AXIS - Left Stick Y - Value: 29
-2025-03-29 20:36:36,239 - AXIS - Right Stick Y (PS3-RX) - Value: -23
-2025-03-29 20:36:36,257 - AXIS - Left Stick Y - Value: 43
-2025-03-29 20:36:36,260 - AXIS - Right Stick Y (PS3-RX) - Value: -38
-2025-03-29 20:36:36,359 - AXIS - Left Stick X - Value: -116
-2025-03-29 20:36:36,363 - AXIS - Left Stick Y - Value: 113
-2025-03-29 20:36:36,368 - AXIS - Right Stick X (PS3-Z) - Value: -126
-2025-03-29 20:36:36,371 - AXIS - Right Stick Y (PS3-RX) - Value: -108
-2025-03-29 20:36:36,376 - AXIS - Left Stick X - Value: -108
-2025-03-29 20:36:36,378 - AXIS - Left Stick Y - Value: 123
-2025-03-29 20:36:36,381 - AXIS - Right Stick X (PS3-Z) - Value: -120
-2025-03-29 20:36:36,383 - AXIS - Right Stick Y (PS3-RX) - Value: -120
-2025-03-29 20:36:36,415 - AXIS - Left Stick X - Value: -79
-2025-03-29 20:36:36,418 - AXIS - Left Stick Y - Value: 127
-2025-03-29 20:36:36,420 - AXIS - Right Stick X (PS3-Z) - Value: -101
-2025-03-29 20:36:36,422 - AXIS - Right Stick Y (PS3-RX) - Value: -127
-2025-03-29 20:36:36,432 - AXIS - Left Stick X - Value: -67
-2025-03-29 20:36:36,434 - AXIS - Right Stick X (PS3-Z) - Value: -90
-2025-03-29 20:36:36,437 - AXIS - Left Stick X - Value: -64
-2025-03-29 20:36:36,439 - AXIS - Right Stick X (PS3-Z) - Value: -80
-2025-03-29 20:36:36,485 - AXIS - Left Stick X - Value: -28
-2025-03-29 20:36:36,488 - AXIS - Right Stick X (PS3-Z) - Value: -43
-2025-03-29 20:36:36,495 - AXIS - Left Stick X - Value: -13
-2025-03-29 20:36:36,497 - AXIS - Right Stick X (PS3-Z) - Value: -31
-2025-03-29 20:36:36,534 - AXIS - Left Stick X - Value: 21
-2025-03-29 20:36:36,536 - AXIS - Right Stick X (PS3-Z) - Value: 0
-2025-03-29 20:36:36,539 - AXIS - Left Stick X - Value: 30
-2025-03-29 20:36:36,541 - AXIS - Right Stick X (PS3-Z) - Value: 12
-2025-03-29 20:36:36,549 - AXIS - Left Stick X - Value: 40
-2025-03-29 20:36:36,551 - AXIS - Right Stick X (PS3-Z) - Value: 23
-2025-03-29 20:36:36,597 - AXIS - Left Stick X - Value: 81
-2025-03-29 20:36:36,599 - AXIS - Right Stick X (PS3-Z) - Value: 68
-2025-03-29 20:36:36,605 - AXIS - Left Stick X - Value: 91
-2025-03-29 20:36:36,607 - AXIS - Right Stick X (PS3-Z) - Value: 75
-2025-03-29 20:36:36,676 - AXIS - Left Stick X - Value: 127
-2025-03-29 20:36:36,678 - AXIS - Left Stick Y - Value: 78
-2025-03-29 20:36:36,681 - AXIS - Right Stick X (PS3-Z) - Value: 122
-2025-03-29 20:36:36,683 - AXIS - Right Stick Y (PS3-RX) - Value: -124
-2025-03-29 20:36:36,717 - AXIS - Left Stick Y - Value: 43
-2025-03-29 20:36:36,719 - AXIS - Right Stick X (PS3-Z) - Value: 127
-2025-03-29 20:36:36,721 - AXIS - Right Stick Y (PS3-RX) - Value: -88
-2025-03-29 20:36:36,730 - AXIS - Left Stick Y - Value: 30
-2025-03-29 20:36:36,733 - AXIS - Right Stick Y (PS3-RX) - Value: -79
-2025-03-29 20:36:36,781 - AXIS - Left Stick Y - Value: 0
-2025-03-29 20:36:36,783 - AXIS - Right Stick Y (PS3-RX) - Value: -41
-2025-03-29 20:36:36,834 - AXIS - Left Stick Y - Value: -44
-2025-03-29 20:36:36,837 - AXIS - Right Stick Y (PS3-RX) - Value: 13
-2025-03-29 20:36:36,854 - AXIS - Left Stick Y - Value: -61
-2025-03-29 20:36:36,857 - AXIS - Right Stick Y (PS3-RX) - Value: 33
-2025-03-29 20:36:36,899 - AXIS - Left Stick Y - Value: -96
-2025-03-29 20:36:36,901 - AXIS - Right Stick Y (PS3-RX) - Value: 65
-2025-03-29 20:36:36,910 - AXIS - Left Stick X - Value: 125
-2025-03-29 20:36:36,912 - AXIS - Left Stick Y - Value: -101
-2025-03-29 20:36:36,914 - AXIS - Right Stick Y (PS3-RX) - Value: 78
-2025-03-29 20:36:36,959 - AXIS - Left Stick X - Value: 94
-2025-03-29 20:36:36,962 - AXIS - Left Stick Y - Value: -127
-2025-03-29 20:36:36,965 - AXIS - Right Stick X (PS3-Z) - Value: 123
-2025-03-29 20:36:36,970 - AXIS - Right Stick Y (PS3-RX) - Value: 108
-2025-03-29 20:36:36,981 - AXIS - Left Stick X - Value: 88
-2025-03-29 20:36:36,984 - AXIS - Right Stick X (PS3-Z) - Value: 118
-2025-03-29 20:36:36,987 - AXIS - Right Stick Y (PS3-RX) - Value: 116
-2025-03-29 20:36:37,019 - AXIS - Left Stick X - Value: 64
-2025-03-29 20:36:37,021 - AXIS - Right Stick X (PS3-Z) - Value: 87
-2025-03-29 20:36:37,023 - AXIS - Right Stick Y (PS3-RX) - Value: 127
-2025-03-29 20:36:37,025 - AXIS - Left Stick X - Value: 46
-2025-03-29 20:36:37,027 - AXIS - Right Stick X (PS3-Z) - Value: 75
-2025-03-29 20:36:37,035 - AXIS - Left Stick X - Value: 31
-2025-03-29 20:36:37,038 - AXIS - Right Stick X (PS3-Z) - Value: 61
-2025-03-29 20:36:37,077 - AXIS - Left Stick X - Value: 0
-2025-03-29 20:36:37,080 - AXIS - Right Stick X (PS3-Z) - Value: 33
-2025-03-29 20:36:37,092 - AXIS - Left Stick X - Value: -29
-2025-03-29 20:36:37,094 - AXIS - Right Stick X (PS3-Z) - Value: 14
-2025-03-29 20:36:37,155 - AXIS - Left Stick X - Value: -93
-2025-03-29 20:36:37,158 - AXIS - Right Stick X (PS3-Z) - Value: -45
-2025-03-29 20:36:37,214 - AXIS - Left Stick X - Value: -118
-2025-03-29 20:36:37,216 - AXIS - Left Stick Y - Value: -116
-2025-03-29 20:36:37,218 - AXIS - Right Stick X (PS3-Z) - Value: -73
-2025-03-29 20:36:37,280 - AXIS - Left Stick X - Value: -127
-2025-03-29 20:36:37,283 - AXIS - Left Stick Y - Value: -90
-2025-03-29 20:36:37,286 - AXIS - Right Stick X (PS3-Z) - Value: -102
-2025-03-29 20:36:37,288 - AXIS - Right Stick Y (PS3-RX) - Value: 123
-2025-03-29 20:36:37,315 - AXIS - Left Stick Y - Value: -71
-2025-03-29 20:36:37,318 - AXIS - Right Stick X (PS3-Z) - Value: -108
-2025-03-29 20:36:37,320 - AXIS - Right Stick Y (PS3-RX) - Value: 116
-2025-03-29 20:36:37,329 - AXIS - Left Stick Y - Value: -70
-2025-03-29 20:36:37,331 - AXIS - Right Stick X (PS3-Z) - Value: -111
-2025-03-29 20:36:37,334 - AXIS - Right Stick Y (PS3-RX) - Value: 110
-2025-03-29 20:36:37,397 - AXIS - Left Stick Y - Value: -63
-2025-03-29 20:36:37,399 - AXIS - Right Stick X (PS3-Z) - Value: -120
-2025-03-29 20:36:37,401 - AXIS - Right Stick Y (PS3-RX) - Value: 104
-2025-03-29 20:36:37,439 - AXIS - Left Stick X - Value: 41
-2025-03-29 20:36:37,441 - AXIS - Left Stick Y - Value: 29
-2025-03-29 20:36:37,446 - AXIS - Right Stick X (PS3-Z) - Value: -65
-2025-03-29 20:36:37,448 - AXIS - Right Stick Y (PS3-RX) - Value: 42
-2025-03-29 20:36:37,450 - AXIS - Left Stick X - Value: -29
-2025-03-29 20:36:37,452 - AXIS - Left Stick Y - Value: -15
-2025-03-29 20:36:37,454 - AXIS - Right Stick X (PS3-Z) - Value: 0
-2025-03-29 20:36:37,456 - AXIS - Right Stick Y (PS3-RX) - Value: 0
-2025-03-29 20:36:37,493 - AXIS - Left Stick X - Value: 0
-2025-03-29 20:36:37,495 - AXIS - Left Stick Y - Value: 0
-2025-03-29 20:36:37,976 - AXIS - Right Stick X (PS3-Z) - Value: -12
-2025-03-29 20:36:37,992 - AXIS - Right Stick X (PS3-Z) - Value: -19
-2025-03-29 20:36:38,037 - AXIS - Left Stick X - Value: 26
-2025-03-29 20:36:38,039 - AXIS - Left Stick Y - Value: 19
-2025-03-29 20:36:38,041 - AXIS - Right Stick X (PS3-Z) - Value: -45
-2025-03-29 20:36:38,043 - AXIS - Right Stick Y (PS3-RX) - Value: 11
-2025-03-29 20:36:38,047 - AXIS - Left Stick X - Value: 30
-2025-03-29 20:36:38,049 - AXIS - Left Stick Y - Value: 26
-2025-03-29 20:36:38,052 - AXIS - Right Stick X (PS3-Z) - Value: -52
-2025-03-29 20:36:38,053 - AXIS - Right Stick Y (PS3-RX) - Value: 12
-2025-03-29 20:36:38,057 - AXIS - Left Stick X - Value: 36
-2025-03-29 20:36:38,059 - AXIS - Left Stick Y - Value: 29
-2025-03-29 20:36:38,061 - AXIS - Right Stick X (PS3-Z) - Value: -62
-2025-03-29 20:36:38,063 - AXIS - Right Stick Y (PS3-RX) - Value: 17
-2025-03-29 20:36:38,095 - AXIS - Left Stick X - Value: 45
-2025-03-29 20:36:38,098 - AXIS - Left Stick Y - Value: 39
-2025-03-29 20:36:38,100 - AXIS - Right Stick X (PS3-Z) - Value: -81
-2025-03-29 20:36:38,102 - AXIS - Right Stick Y (PS3-RX) - Value: 23
-2025-03-29 20:36:38,118 - AXIS - Left Stick X - Value: 52
-2025-03-29 20:36:38,120 - AXIS - Left Stick Y - Value: 46
-2025-03-29 20:36:38,122 - AXIS - Right Stick X (PS3-Z) - Value: -94
-2025-03-29 20:36:38,124 - AXIS - Right Stick Y (PS3-RX) - Value: 29
-2025-03-29 20:36:38,159 - AXIS - Left Stick X - Value: 89
-2025-03-29 20:36:38,162 - AXIS - Left Stick Y - Value: 84
-2025-03-29 20:36:38,164 - AXIS - Right Stick X (PS3-Z) - Value: -127
-2025-03-29 20:36:38,167 - AXIS - Right Stick Y (PS3-RX) - Value: 48
-2025-03-29 20:36:38,170 - AXIS - Left Stick X - Value: 100
-2025-03-29 20:36:38,174 - AXIS - Left Stick Y - Value: 101
-2025-03-29 20:36:38,179 - AXIS - Right Stick Y (PS3-RX) - Value: 59
-2025-03-29 20:36:38,217 - AXIS - Left Stick X - Value: 110
-2025-03-29 20:36:38,219 - AXIS - Left Stick Y - Value: 112
-2025-03-29 20:36:38,295 - AXIS - Left Stick X - Value: 103
-2025-03-29 20:36:38,298 - AXIS - Left Stick Y - Value: 121
-2025-03-29 20:36:38,300 - AXIS - Right Stick Y (PS3-RX) - Value: 63
-2025-03-29 20:36:38,337 - AXIS - Left Stick X - Value: 87
-2025-03-29 20:36:38,339 - AXIS - Left Stick Y - Value: 127
-2025-03-29 20:36:38,341 - AXIS - Right Stick Y (PS3-RX) - Value: 85
-2025-03-29 20:36:38,350 - AXIS - Left Stick X - Value: 79
-2025-03-29 20:36:38,353 - AXIS - Right Stick Y (PS3-RX) - Value: 89
-2025-03-29 20:36:38,395 - AXIS - Left Stick X - Value: 36
-2025-03-29 20:36:38,398 - AXIS - Right Stick X (PS3-Z) - Value: -113
-2025-03-29 20:36:38,400 - AXIS - Right Stick Y (PS3-RX) - Value: 108
-2025-03-29 20:36:38,413 - AXIS - Left Stick X - Value: 23
-2025-03-29 20:36:38,415 - AXIS - Right Stick X (PS3-Z) - Value: -107
-2025-03-29 20:36:38,417 - AXIS - Right Stick Y (PS3-RX) - Value: 116
-2025-03-29 20:36:38,419 - AXIS - Left Stick X - Value: 0
-2025-03-29 20:36:38,421 - AXIS - Right Stick X (PS3-Z) - Value: -102
-2025-03-29 20:36:38,423 - AXIS - Right Stick Y (PS3-RX) - Value: 124
-2025-03-29 20:36:38,455 - AXIS - Left Stick X - Value: -38
-2025-03-29 20:36:38,458 - AXIS - Right Stick X (PS3-Z) - Value: -76
-2025-03-29 20:36:38,460 - AXIS - Right Stick Y (PS3-RX) - Value: 127
-2025-03-29 20:36:38,476 - AXIS - Left Stick X - Value: -54
-2025-03-29 20:36:38,481 - AXIS - Right Stick X (PS3-Z) - Value: -58
-2025-03-29 20:36:38,514 - AXIS - Left Stick X - Value: -66
-2025-03-29 20:36:38,516 - AXIS - Right Stick X (PS3-Z) - Value: -19
-2025-03-29 20:36:38,524 - AXIS - Left Stick X - Value: -72
-2025-03-29 20:36:38,526 - AXIS - Right Stick X (PS3-Z) - Value: 0
-2025-03-29 20:36:38,529 - AXIS - Left Stick X - Value: -79
-2025-03-29 20:36:38,531 - AXIS - Right Stick X (PS3-Z) - Value: 15
-2025-03-29 20:36:38,582 - AXIS - Left Stick X - Value: -102
-2025-03-29 20:36:38,584 - AXIS - Left Stick Y - Value: 126
-2025-03-29 20:36:38,586 - AXIS - Right Stick X (PS3-Z) - Value: 94
-2025-03-29 20:36:38,592 - AXIS - Left Stick X - Value: -108
-2025-03-29 20:36:38,594 - AXIS - Left Stick Y - Value: 122
-2025-03-29 20:36:38,596 - AXIS - Right Stick X (PS3-Z) - Value: 110
-2025-03-29 20:36:38,598 - AXIS - Right Stick Y (PS3-RX) - Value: 116
-2025-03-29 20:36:38,600 - AXIS - Left Stick X - Value: -115
-2025-03-29 20:36:38,602 - AXIS - Left Stick Y - Value: 113
-2025-03-29 20:36:38,604 - AXIS - Right Stick X (PS3-Z) - Value: 119
-2025-03-29 20:36:38,606 - AXIS - Right Stick Y (PS3-RX) - Value: 108
-2025-03-29 20:36:38,645 - AXIS - Left Stick X - Value: -127
-2025-03-29 20:36:38,649 - AXIS - Left Stick Y - Value: 78
-2025-03-29 20:36:38,651 - AXIS - Right Stick X (PS3-Z) - Value: 127
-2025-03-29 20:36:38,653 - AXIS - Right Stick Y (PS3-RX) - Value: 87
-2025-03-29 20:36:38,655 - AXIS - Left Stick Y - Value: 66
-2025-03-29 20:36:38,658 - AXIS - Right Stick Y (PS3-RX) - Value: 86
-2025-03-29 20:36:38,695 - AXIS - Left Stick Y - Value: 22
-2025-03-29 20:36:38,698 - AXIS - Left Stick Y - Value: 0
-2025-03-29 20:36:38,700 - AXIS - Right Stick Y (PS3-RX) - Value: 78
-2025-03-29 20:36:38,755 - AXIS - Left Stick Y - Value: -61
-2025-03-29 20:36:38,758 - AXIS - Right Stick Y (PS3-RX) - Value: 39
-2025-03-29 20:36:38,769 - AXIS - Left Stick Y - Value: -71
-2025-03-29 20:36:38,772 - AXIS - Right Stick Y (PS3-RX) - Value: 35
-2025-03-29 20:36:38,777 - AXIS - Left Stick Y - Value: -78
-2025-03-29 20:36:38,781 - AXIS - Right Stick Y (PS3-RX) - Value: 28
-2025-03-29 20:36:38,814 - AXIS - Left Stick Y - Value: -93
-2025-03-29 20:36:38,816 - AXIS - Right Stick Y (PS3-RX) - Value: 0
-2025-03-29 20:36:38,824 - AXIS - Left Stick Y - Value: -96
-2025-03-29 20:36:38,826 - AXIS - Right Stick Y (PS3-RX) - Value: -20
-2025-03-29 20:36:38,876 - AXIS - Left Stick X - Value: -115
-2025-03-29 20:36:38,882 - AXIS - Left Stick Y - Value: -121
-2025-03-29 20:36:38,884 - AXIS - Right Stick Y (PS3-RX) - Value: -93
-2025-03-29 20:36:38,892 - AXIS - Left Stick X - Value: -100
-2025-03-29 20:36:38,895 - AXIS - Left Stick Y - Value: -127
-2025-03-29 20:36:38,897 - AXIS - Right Stick X (PS3-Z) - Value: 123
-2025-03-29 20:36:38,899 - AXIS - Right Stick Y (PS3-RX) - Value: -123
-2025-03-29 20:36:38,942 - AXIS - Left Stick X - Value: 0
-2025-03-29 20:36:38,944 - AXIS - Left Stick Y - Value: 29
-2025-03-29 20:36:38,946 - AXIS - Right Stick X (PS3-Z) - Value: 68
-2025-03-29 20:36:38,948 - AXIS - Right Stick Y (PS3-RX) - Value: -121
-2025-03-29 20:36:38,950 - AXIS - Left Stick Y - Value: -17
-2025-03-29 20:36:38,952 - AXIS - Right Stick X (PS3-Z) - Value: -22
-2025-03-29 20:36:38,954 - AXIS - Right Stick Y (PS3-RX) - Value: 39
-2025-03-29 20:36:38,958 - AXIS - Left Stick Y - Value: 0
-2025-03-29 20:36:38,960 - AXIS - Right Stick X (PS3-Z) - Value: 0
-2025-03-29 20:36:38,962 - AXIS - Right Stick Y (PS3-RX) - Value: 0
-2025-03-29 20:36:39,497 - AXIS - Left Stick Y - Value: -12
-2025-03-29 20:36:39,499 - AXIS - Right Stick Y (PS3-RX) - Value: 17
-2025-03-29 20:36:39,533 - AXIS - Left Stick Y - Value: -38
-2025-03-29 20:36:39,535 - AXIS - Right Stick Y (PS3-RX) - Value: 44
-2025-03-29 20:36:39,547 - AXIS - Left Stick Y - Value: -51
-2025-03-29 20:36:39,549 - AXIS - Right Stick Y (PS3-RX) - Value: 62
-2025-03-29 20:36:39,556 - AXIS - Left Stick Y - Value: -71
-2025-03-29 20:36:39,558 - AXIS - Right Stick Y (PS3-RX) - Value: 79
-2025-03-29 20:36:39,594 - AXIS - Left Stick X - Value: -25
-2025-03-29 20:36:39,597 - AXIS - Left Stick Y - Value: -127
-2025-03-29 20:36:39,600 - AXIS - Right Stick X (PS3-Z) - Value: -17
-2025-03-29 20:36:39,602 - AXIS - Right Stick Y (PS3-RX) - Value: 127
-2025-03-29 20:36:39,613 - AXIS - Left Stick X - Value: -16
-2025-03-29 20:36:39,717 - AXIS - Left Stick X - Value: -15
-2025-03-29 20:36:39,739 - AXIS - Right Stick X (PS3-Z) - Value: -19
-2025-03-29 20:36:39,785 - AXIS - Left Stick X - Value: -14
-2025-03-29 20:36:39,789 - AXIS - Left Stick Y - Value: -96
-2025-03-29 20:36:39,791 - AXIS - Right Stick X (PS3-Z) - Value: 0
-2025-03-29 20:36:39,793 - AXIS - Right Stick Y (PS3-RX) - Value: 0
-2025-03-29 20:36:39,844 - AXIS - Left Stick X - Value: 0
-2025-03-29 20:36:39,846 - AXIS - Left Stick Y - Value: 0
-2025-03-29 20:36:40,084 - AXIS - Left Stick X - Value: -10
-2025-03-29 20:36:40,100 - AXIS - Left Stick X - Value: -11
-2025-03-29 20:36:40,133 - AXIS - Left Stick X - Value: -13
-2025-03-29 20:36:40,155 - AXIS - Left Stick X - Value: -22
-2025-03-29 20:36:40,199 - AXIS - Left Stick X - Value: -57
-2025-03-29 20:36:40,213 - AXIS - Left Stick X - Value: -70
-2025-03-29 20:36:40,263 - AXIS - Left Stick X - Value: -127
-2025-03-29 20:36:40,265 - AXIS - Left Stick Y - Value: -17
-2025-03-29 20:36:40,322 - AXIS - Left Stick Y - Value: -16
-2025-03-29 20:36:40,335 - AXIS - Left Stick Y - Value: -13
-2025-03-29 20:36:40,805 - AXIS - Left Stick Y - Value: -15
-2025-03-29 20:36:40,861 - AXIS - Left Stick X - Value: 0
-2025-03-29 20:36:40,864 - AXIS - Left Stick Y - Value: 0
-2025-03-29 20:36:41,721 - AXIS - Left Stick X - Value: 10
-2025-03-29 20:36:41,758 - AXIS - Left Stick X - Value: 67
-2025-03-29 20:36:41,760 - AXIS - Left Stick Y - Value: 20
-2025-03-29 20:36:41,775 - AXIS - Left Stick X - Value: 80
-2025-03-29 20:36:41,777 - AXIS - Left Stick Y - Value: 25
-2025-03-29 20:36:41,830 - AXIS - Left Stick X - Value: 127
-2025-03-29 20:36:41,835 - AXIS - Left Stick Y - Value: 39
-2025-03-29 20:36:41,878 - AXIS - Left Stick Y - Value: 29
-2025-03-29 20:36:42,057 - AXIS - Left Stick Y - Value: 30
-2025-03-29 20:36:42,076 - AXIS - Left Stick X - Value: 112
-2025-03-29 20:36:42,079 - AXIS - Left Stick Y - Value: 28
-2025-03-29 20:36:42,118 - AXIS - Left Stick X - Value: 0
-2025-03-29 20:36:42,120 - AXIS - Left Stick Y - Value: 0
-2025-03-29 20:36:42,313 - AXIS - Left Stick Y - Value: 11
-2025-03-29 20:36:42,357 - AXIS - Left Stick X - Value: -14
-2025-03-29 20:36:42,359 - AXIS - Left Stick Y - Value: 35
-2025-03-29 20:36:42,365 - AXIS - Left Stick X - Value: -22
-2025-03-29 20:36:42,367 - AXIS - Left Stick Y - Value: 47
-2025-03-29 20:36:42,376 - AXIS - Left Stick X - Value: -26
-2025-03-29 20:36:42,379 - AXIS - Left Stick Y - Value: 59
-2025-03-29 20:36:42,475 - AXIS - Left Stick X - Value: -97
-2025-03-29 20:36:42,478 - AXIS - Left Stick Y - Value: 127
-2025-03-29 20:36:42,545 - AXIS - Left Stick X - Value: -106
-2025-03-29 20:36:42,548 - AXIS - Left Stick Y - Value: 124
-2025-03-29 20:36:42,551 - AXIS - Right Stick Y (PS3-RX) - Value: 11
-2025-03-29 20:36:42,553 - AXIS - Left Stick X - Value: -107
-2025-03-29 20:36:42,555 - AXIS - Left Stick Y - Value: 123
-2025-03-29 20:36:42,557 - AXIS - Right Stick Y (PS3-RX) - Value: 19
-2025-03-29 20:36:42,593 - AXIS - Left Stick X - Value: -117
-2025-03-29 20:36:42,595 - AXIS - Left Stick Y - Value: 111
-2025-03-29 20:36:42,598 - AXIS - Right Stick Y (PS3-RX) - Value: 70
-2025-03-29 20:36:42,668 - AXIS - Left Stick X - Value: -127
-2025-03-29 20:36:42,670 - AXIS - Left Stick Y - Value: 65
-2025-03-29 20:36:42,672 - AXIS - Right Stick Y (PS3-RX) - Value: 127
-2025-03-29 20:36:42,718 - AXIS - Left Stick Y - Value: 38
-2025-03-29 20:36:42,736 - AXIS - Left Stick Y - Value: 16
-2025-03-29 20:36:42,780 - AXIS - Left Stick Y - Value: -32
-2025-03-29 20:36:42,793 - AXIS - Left Stick Y - Value: -43
-2025-03-29 20:36:42,837 - AXIS - Left Stick Y - Value: -95
-2025-03-29 20:36:42,849 - AXIS - Left Stick Y - Value: -106
-2025-03-29 20:36:42,917 - AXIS - Left Stick X - Value: -56
-2025-03-29 20:36:42,919 - AXIS - Left Stick Y - Value: -127
-2025-03-29 20:36:42,958 - AXIS - Left Stick X - Value: -23
-2025-03-29 20:36:42,963 - AXIS - Left Stick X - Value: -19
-2025-03-29 20:36:42,973 - AXIS - Left Stick X - Value: -17
-2025-03-29 20:36:42,975 - AXIS - Right Stick X (PS3-Z) - Value: -19
-2025-03-29 20:36:43,018 - AXIS - Left Stick X - Value: -16
-2025-03-29 20:36:43,020 - AXIS - Right Stick X (PS3-Z) - Value: -50
-2025-03-29 20:36:43,029 - AXIS - Left Stick X - Value: -18
-2025-03-29 20:36:43,032 - AXIS - Left Stick Y - Value: -76
-2025-03-29 20:36:43,034 - AXIS - Right Stick X (PS3-Z) - Value: -59
-2025-03-29 20:36:43,073 - AXIS - Left Stick X - Value: 0
-2025-03-29 20:36:43,075 - AXIS - Left Stick Y - Value: 0
-2025-03-29 20:36:43,077 - AXIS - Right Stick X (PS3-Z) - Value: 0
-2025-03-29 20:36:43,079 - AXIS - Right Stick Y (PS3-RX) - Value: 0
-2025-03-29 20:36:43,988 - BUTTON - L1 - Pressed - Code: 294
-2025-03-29 20:36:44,178 - BUTTON - L1 - Released - Code: 294
-2025-03-29 20:36:44,524 - BUTTON - R1 - Pressed - Code: 295
-2025-03-29 20:36:44,717 - BUTTON - R1 - Released - Code: 295
-2025-03-29 20:36:45,254 - BUTTON - R1 - Pressed - Code: 295
-2025-03-29 20:36:45,369 - BUTTON - R1 - Released - Code: 295
-2025-03-29 20:36:45,731 - BUTTON - R1 - Pressed - Code: 295
-2025-03-29 20:36:45,896 - BUTTON - R1 - Released - Code: 295
-2025-03-29 20:36:46,021 - BUTTON - R1 - Pressed - Code: 295
-2025-03-29 20:36:46,155 - BUTTON - R1 - Released - Code: 295
-2025-03-29 20:36:46,393 - BUTTON - R1 - Pressed - Code: 295
-2025-03-29 20:36:46,493 - BUTTON - R1 - Released - Code: 295
-2025-03-29 20:36:46,746 - BUTTON - L1 - Pressed - Code: 294
-2025-03-29 20:36:46,859 - BUTTON - L1 - Released - Code: 294
-2025-03-29 20:36:46,984 - BUTTON - L1 - Pressed - Code: 294
-2025-03-29 20:36:47,033 - BUTTON - L1 - Released - Code: 294
-2025-03-29 20:36:47,169 - BUTTON - PS Button - Pressed - Code: 292
-2025-03-29 20:36:47,338 - BUTTON - PS Button - Released - Code: 292
-2025-03-29 20:36:47,472 - BUTTON - Unknown (293) - Pressed - Code: 293
-2025-03-29 20:36:47,597 - BUTTON - Unknown (293) - Released - Code: 293
-2025-03-29 20:36:47,899 - BUTTON - Unknown (303) - Pressed - Code: 303
-2025-03-29 20:36:48,014 - BUTTON - Unknown (303) - Released - Code: 303
-2025-03-29 20:36:48,181 - BUTTON - Unknown (300) - Pressed - Code: 300
-2025-03-29 20:36:48,308 - BUTTON - Unknown (300) - Released - Code: 300
-2025-03-29 20:36:48,501 - BUTTON - Unknown (301) - Pressed - Code: 301
-2025-03-29 20:36:48,609 - BUTTON - Unknown (301) - Released - Code: 301
-2025-03-29 20:36:48,801 - BUTTON - Unknown (302) - Pressed - Code: 302
-2025-03-29 20:36:48,857 - BUTTON - Unknown (302) - Released - Code: 302
-2025-03-29 20:36:49,079 - BUTTON - Unknown (303) - Pressed - Code: 303
-2025-03-29 20:36:49,208 - BUTTON - Unknown (303) - Released - Code: 303
-2025-03-29 20:36:49,796 - BUTTON - R2 - Pressed - Code: 299
-2025-03-29 20:41:59,820 - Controller connected: PLAYSTATION(R)3 Controller (38:C0:96:AC:ED:71) (PS3)
-2025-03-29 20:42:02,267 - BUTTON - L3 - Released - Code: 296
-2025-03-29 20:42:02,568 - BUTTON - L3 - Pressed - Code: 296
-2025-03-29 20:42:02,634 - AXIS - Left Stick Y - Value: 11
-2025-03-29 20:42:02,646 - AXIS - Left Stick Y - Value: 16
-2025-03-29 20:42:02,691 - BUTTON - L3 - Released - Code: 296
-2025-03-29 20:42:02,692 - AXIS - Left Stick Y - Value: 20
-2025-03-29 20:42:02,712 - AXIS - Left Stick Y - Value: 21
-2025-03-29 20:42:02,749 - BUTTON - L3 - Pressed - Code: 296
-2025-03-29 20:42:02,750 - AXIS - Left Stick Y - Value: 34
-2025-03-29 20:42:02,758 - AXIS - Left Stick Y - Value: 53
-2025-03-29 20:42:02,772 - AXIS - Left Stick Y - Value: 75
-2025-03-29 20:42:02,831 - AXIS - Left Stick X - Value: -11
-2025-03-29 20:42:02,833 - AXIS - Left Stick Y - Value: 127
-2025-03-29 20:42:02,885 - AXIS - Left Stick X - Value: -12
-2025-03-29 20:42:02,931 - AXIS - Left Stick X - Value: -11
-2025-03-29 20:42:02,994 - AXIS - Left Stick X - Value: -12
-2025-03-29 20:42:03,049 - AXIS - Left Stick X - Value: -11
-2025-03-29 20:42:03,062 - AXIS - Left Stick X - Value: -12
-2025-03-29 20:42:03,186 - BUTTON - L3 - Released - Code: 296
-2025-03-29 20:42:03,233 - AXIS - Left Stick X - Value: -11
-2025-03-29 20:42:03,236 - AXIS - Left Stick Y - Value: 65
-2025-03-29 20:42:03,291 - AXIS - Left Stick X - Value: 0
-2025-03-29 20:42:03,294 - AXIS - Left Stick Y - Value: 0
-2025-03-29 20:42:03,532 - BUTTON - L3 - Pressed - Code: 296
-2025-03-29 20:42:03,602 - BUTTON - L3 - Released - Code: 296
-2025-03-29 20:42:05,389 - BUTTON - R1 - Pressed - Code: 295
-2025-03-29 20:42:05,526 - BUTTON - R1 - Released - Code: 295
-2025-03-29 20:42:05,748 - BUTTON - R1 - Pressed - Code: 295
-2025-03-29 20:42:05,867 - BUTTON - R1 - Released - Code: 295
-2025-03-29 20:42:06,054 - BUTTON - PS Button - Pressed - Code: 292
-2025-03-29 20:42:06,232 - BUTTON - PS Button - Released - Code: 292
-2025-03-29 20:42:06,648 - BUTTON - Unknown (293) - Pressed - Code: 293
-2025-03-29 20:42:06,769 - BUTTON - Unknown (293) - Released - Code: 293
-2025-03-29 20:42:06,887 - BUTTON - Unknown (293) - Pressed - Code: 293
-2025-03-29 20:42:07,008 - BUTTON - Unknown (293) - Released - Code: 293
-2025-03-29 20:42:07,146 - BUTTON - L1 - Pressed - Code: 294
-2025-03-29 20:42:07,258 - BUTTON - L1 - Released - Code: 294
-2025-03-29 20:42:07,507 - BUTTON - R1 - Pressed - Code: 295
-2025-03-29 20:42:07,619 - BUTTON - R1 - Released - Code: 295
-2025-03-29 20:42:07,791 - BUTTON - L1 - Pressed - Code: 294
-2025-03-29 20:42:07,922 - BUTTON - L1 - Released - Code: 294
-2025-03-29 20:42:08,149 - BUTTON - R1 - Pressed - Code: 295
-2025-03-29 20:42:08,282 - BUTTON - R1 - Released - Code: 295
-2025-03-29 20:42:08,806 - BUTTON - R2 - Pressed - Code: 299
-2025-03-29 20:55:18,804 - Controller connected: PLAYSTATION(R)3 Controller (38:C0:96:AC:ED:71) (PS3)
+2025-03-29 22:14:44,572 - Controller connected: PLAYSTATION(R)3 Controller (38:C0:96:9E:58:AD) (PS3)
+2025-03-29 22:14:46,144 - BUTTON - L3 - Released - Code: 296
+2025-03-29 22:14:48,345 - AXIS - Left Stick X - Value: -12
+2025-03-29 22:14:48,347 - SERVO - Channel 0 - From 90° to 89° - Joystick value: -12
+2025-03-29 22:14:48,348 - AXIS - Left Stick X - Value: -13
+2025-03-29 22:14:48,351 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -13
+2025-03-29 22:14:48,361 - AXIS - Left Stick X - Value: -14
+2025-03-29 22:14:48,364 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -14
+2025-03-29 22:14:48,421 - AXIS - Left Stick X - Value: -18
+2025-03-29 22:14:48,423 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -18
+2025-03-29 22:14:48,466 - AXIS - Left Stick X - Value: -21
+2025-03-29 22:14:48,469 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -21
+2025-03-29 22:14:48,473 - AXIS - Left Stick X - Value: -27
+2025-03-29 22:14:48,475 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -27
+2025-03-29 22:14:48,486 - AXIS - Left Stick X - Value: -31
+2025-03-29 22:14:48,490 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -31
+2025-03-29 22:14:48,490 - AXIS - Left Stick Y - Value: -10
+2025-03-29 22:14:48,493 - SERVO - Channel 1 - From 90° to 89° - Joystick value: -10
+2025-03-29 22:14:48,524 - AXIS - Left Stick X - Value: -44
+2025-03-29 22:14:48,527 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -44
+2025-03-29 22:14:48,528 - AXIS - Left Stick Y - Value: -15
+2025-03-29 22:14:48,530 - SERVO - Channel 1 - From 89° to 89° - Joystick value: -15
+2025-03-29 22:14:48,531 - AXIS - Left Stick X - Value: -46
+2025-03-29 22:14:48,533 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -46
+2025-03-29 22:14:48,534 - AXIS - Left Stick Y - Value: -17
+2025-03-29 22:14:48,537 - SERVO - Channel 1 - From 89° to 89° - Joystick value: -17
+2025-03-29 22:14:48,545 - AXIS - Left Stick X - Value: -49
+2025-03-29 22:14:48,547 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -49
+2025-03-29 22:14:48,548 - AXIS - Left Stick Y - Value: -20
+2025-03-29 22:14:48,550 - SERVO - Channel 1 - From 89° to 89° - Joystick value: -20
+2025-03-29 22:14:48,551 - AXIS - Left Stick X - Value: -55
+2025-03-29 22:14:48,553 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -55
+2025-03-29 22:14:48,602 - AXIS - Left Stick X - Value: -67
+2025-03-29 22:14:48,607 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -67
+2025-03-29 22:14:48,608 - AXIS - Left Stick Y - Value: -28
+2025-03-29 22:14:48,610 - SERVO - Channel 1 - From 89° to 89° - Joystick value: -28
+2025-03-29 22:14:48,663 - AXIS - Left Stick X - Value: -69
+2025-03-29 22:14:48,666 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -69
+2025-03-29 22:14:48,705 - AXIS - Left Stick X - Value: -80
+2025-03-29 22:14:48,707 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -80
+2025-03-29 22:14:48,708 - AXIS - Left Stick X - Value: -83
+2025-03-29 22:14:48,710 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -83
+2025-03-29 22:14:48,725 - AXIS - Left Stick X - Value: -85
+2025-03-29 22:14:48,727 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -85
+2025-03-29 22:14:48,787 - AXIS - Left Stick X - Value: -90
+2025-03-29 22:14:48,790 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -90
+2025-03-29 22:14:48,830 - AXIS - Left Stick X - Value: -96
+2025-03-29 22:14:48,832 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -96
+2025-03-29 22:14:48,833 - AXIS - Left Stick Y - Value: -26
+2025-03-29 22:14:48,835 - SERVO - Channel 1 - From 89° to 89° - Joystick value: -26
+2025-03-29 22:14:48,842 - AXIS - Left Stick X - Value: -98
+2025-03-29 22:14:48,845 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -98
+2025-03-29 22:14:48,845 - AXIS - Left Stick Y - Value: -25
+2025-03-29 22:14:48,847 - SERVO - Channel 1 - From 89° to 89° - Joystick value: -25
+2025-03-29 22:14:48,895 - AXIS - Left Stick X - Value: -100
+2025-03-29 22:14:48,899 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -100
+2025-03-29 22:14:48,901 - AXIS - Left Stick Y - Value: -24
+2025-03-29 22:14:48,904 - SERVO - Channel 1 - From 89° to 89° - Joystick value: -24
+2025-03-29 22:14:48,905 - AXIS - Left Stick X - Value: -101
+2025-03-29 22:14:48,907 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -101
+2025-03-29 22:14:48,947 - AXIS - Left Stick X - Value: -111
+2025-03-29 22:14:48,950 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -111
+2025-03-29 22:14:48,950 - AXIS - Left Stick Y - Value: -25
+2025-03-29 22:14:48,952 - SERVO - Channel 1 - From 89° to 89° - Joystick value: -25
+2025-03-29 22:14:48,969 - AXIS - Left Stick X - Value: -119
+2025-03-29 22:14:48,971 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -119
+2025-03-29 22:14:48,972 - AXIS - Left Stick Y - Value: -27
+2025-03-29 22:14:48,974 - SERVO - Channel 1 - From 89° to 89° - Joystick value: -27
+2025-03-29 22:14:49,015 - AXIS - Left Stick X - Value: -127
+2025-03-29 22:14:49,017 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -127
+2025-03-29 22:14:49,018 - AXIS - Left Stick Y - Value: -47
+2025-03-29 22:14:49,021 - SERVO - Channel 1 - From 89° to 89° - Joystick value: -47
+2025-03-29 22:14:49,022 - AXIS - Left Stick Y - Value: -51
+2025-03-29 22:14:49,025 - SERVO - Channel 1 - From 89° to 89° - Joystick value: -51
+2025-03-29 22:14:49,067 - AXIS - Left Stick Y - Value: -62
+2025-03-29 22:14:49,070 - SERVO - Channel 1 - From 89° to 89° - Joystick value: -62
+2025-03-29 22:14:49,090 - AXIS - Left Stick Y - Value: -63
+2025-03-29 22:14:49,092 - SERVO - Channel 1 - From 89° to 89° - Joystick value: -63
+2025-03-29 22:14:49,132 - AXIS - Left Stick Y - Value: -62
+2025-03-29 22:14:49,135 - SERVO - Channel 1 - From 89° to 89° - Joystick value: -62
+2025-03-29 22:14:49,315 - AXIS - Left Stick Y - Value: -63
+2025-03-29 22:14:49,317 - SERVO - Channel 1 - From 89° to 89° - Joystick value: -63
+2025-03-29 22:14:49,328 - AXIS - Left Stick Y - Value: -62
+2025-03-29 22:14:49,330 - SERVO - Channel 1 - From 89° to 89° - Joystick value: -62
+2025-03-29 22:14:49,365 - AXIS - Left Stick X - Value: -126
+2025-03-29 22:14:49,367 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -126
+2025-03-29 22:14:49,368 - AXIS - Left Stick Y - Value: -52
+2025-03-29 22:14:49,371 - SERVO - Channel 1 - From 89° to 89° - Joystick value: -52
+2025-03-29 22:14:49,378 - AXIS - Left Stick X - Value: -111
+2025-03-29 22:14:49,380 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -111
+2025-03-29 22:14:49,381 - AXIS - Left Stick Y - Value: -46
+2025-03-29 22:14:49,384 - SERVO - Channel 1 - From 89° to 89° - Joystick value: -46
+2025-03-29 22:14:49,385 - AXIS - Left Stick X - Value: -67
+2025-03-29 22:14:49,388 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -67
+2025-03-29 22:14:49,389 - AXIS - Left Stick Y - Value: -35
+2025-03-29 22:14:49,391 - SERVO - Channel 1 - From 89° to 89° - Joystick value: -35
+2025-03-29 22:14:49,426 - AXIS - Left Stick X - Value: 0
+2025-03-29 22:14:49,428 - SERVO - Channel 0 - From 89° to 90° - Joystick value: 0
+2025-03-29 22:14:49,429 - AXIS - Left Stick Y - Value: 0
+2025-03-29 22:14:49,431 - SERVO - Channel 1 - From 89° to 90° - Joystick value: 0
+2025-03-29 22:14:49,965 - AXIS - Left Stick Y - Value: 10
+2025-03-29 22:14:49,967 - SERVO - Channel 1 - From 90° to 90° - Joystick value: 10
+2025-03-29 22:14:49,968 - AXIS - Left Stick Y - Value: 13
+2025-03-29 22:14:49,970 - SERVO - Channel 1 - From 90° to 90° - Joystick value: 13
+2025-03-29 22:14:49,979 - AXIS - Left Stick Y - Value: 15
+2025-03-29 22:14:49,982 - SERVO - Channel 1 - From 90° to 90° - Joystick value: 15
+2025-03-29 22:14:50,035 - AXIS - Left Stick Y - Value: 40
+2025-03-29 22:14:50,038 - SERVO - Channel 1 - From 90° to 90° - Joystick value: 40
+2025-03-29 22:14:50,048 - AXIS - Left Stick Y - Value: 47
+2025-03-29 22:14:50,050 - SERVO - Channel 1 - From 90° to 90° - Joystick value: 47
+2025-03-29 22:14:50,085 - AXIS - Left Stick X - Value: -10
+2025-03-29 22:14:50,087 - SERVO - Channel 0 - From 90° to 89° - Joystick value: -10
+2025-03-29 22:14:50,088 - AXIS - Left Stick Y - Value: 56
+2025-03-29 22:14:50,090 - SERVO - Channel 1 - From 90° to 90° - Joystick value: 56
+2025-03-29 22:14:50,094 - AXIS - Left Stick X - Value: -13
+2025-03-29 22:14:50,096 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -13
+2025-03-29 22:14:50,097 - AXIS - Left Stick Y - Value: 57
+2025-03-29 22:14:50,100 - SERVO - Channel 1 - From 90° to 90° - Joystick value: 57
+2025-03-29 22:14:50,103 - AXIS - Left Stick X - Value: -14
+2025-03-29 22:14:50,106 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -14
+2025-03-29 22:14:50,109 - AXIS - Left Stick Y - Value: 56
+2025-03-29 22:14:50,112 - SERVO - Channel 1 - From 90° to 90° - Joystick value: 56
+2025-03-29 22:14:50,150 - AXIS - Left Stick X - Value: -16
+2025-03-29 22:14:50,154 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -16
+2025-03-29 22:14:50,157 - AXIS - Left Stick Y - Value: 57
+2025-03-29 22:14:50,168 - SERVO - Channel 1 - From 90° to 90° - Joystick value: 57
+2025-03-29 22:14:50,170 - AXIS - Left Stick X - Value: -17
+2025-03-29 22:14:50,174 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -17
+2025-03-29 22:14:50,206 - AXIS - Left Stick Y - Value: 67
+2025-03-29 22:14:50,208 - SERVO - Channel 1 - From 90° to 90° - Joystick value: 67
+2025-03-29 22:14:50,218 - AXIS - Left Stick Y - Value: 71
+2025-03-29 22:14:50,224 - SERVO - Channel 1 - From 90° to 90° - Joystick value: 71
+2025-03-29 22:14:50,230 - AXIS - Left Stick Y - Value: 76
+2025-03-29 22:14:50,233 - SERVO - Channel 1 - From 90° to 90° - Joystick value: 76
+2025-03-29 22:14:50,265 - AXIS - Left Stick Y - Value: 87
+2025-03-29 22:14:50,267 - SERVO - Channel 1 - From 90° to 90° - Joystick value: 87
+2025-03-29 22:14:50,271 - AXIS - Left Stick Y - Value: 95
+2025-03-29 22:14:50,273 - SERVO - Channel 1 - From 90° to 90° - Joystick value: 95
+2025-03-29 22:14:50,284 - AXIS - Left Stick Y - Value: 99
+2025-03-29 22:14:50,286 - SERVO - Channel 1 - From 90° to 90° - Joystick value: 99
+2025-03-29 22:14:50,322 - AXIS - Left Stick Y - Value: 108
+2025-03-29 22:14:50,325 - SERVO - Channel 1 - From 90° to 90° - Joystick value: 108
+2025-03-29 22:14:50,327 - AXIS - Left Stick Y - Value: 113
+2025-03-29 22:14:50,330 - SERVO - Channel 1 - From 90° to 90° - Joystick value: 113
+2025-03-29 22:14:50,340 - AXIS - Left Stick Y - Value: 117
+2025-03-29 22:14:50,342 - SERVO - Channel 1 - From 90° to 90° - Joystick value: 117
+2025-03-29 22:14:50,405 - AXIS - Left Stick Y - Value: 127
+2025-03-29 22:14:50,407 - SERVO - Channel 1 - From 90° to 90° - Joystick value: 127
+2025-03-29 22:14:50,477 - AXIS - Left Stick X - Value: -18
+2025-03-29 22:14:50,479 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -18
+2025-03-29 22:14:50,698 - AXIS - Left Stick Y - Value: 113
+2025-03-29 22:14:50,701 - SERVO - Channel 1 - From 90° to 90° - Joystick value: 113
+2025-03-29 22:14:50,710 - AXIS - Left Stick X - Value: -17
+2025-03-29 22:14:50,712 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -17
+2025-03-29 22:14:50,713 - AXIS - Left Stick Y - Value: 57
+2025-03-29 22:14:50,715 - SERVO - Channel 1 - From 90° to 90° - Joystick value: 57
+2025-03-29 22:14:50,745 - AXIS - Left Stick X - Value: 0
+2025-03-29 22:14:50,748 - SERVO - Channel 0 - From 89° to 90° - Joystick value: 0
+2025-03-29 22:14:50,748 - AXIS - Left Stick Y - Value: 0
+2025-03-29 22:14:50,752 - SERVO - Channel 1 - From 90° to 90° - Joystick value: 0
+2025-03-29 22:14:51,105 - AXIS - Left Stick Y - Value: -12
+2025-03-29 22:14:51,107 - SERVO - Channel 1 - From 90° to 89° - Joystick value: -12
+2025-03-29 22:14:51,115 - AXIS - Left Stick Y - Value: -20
+2025-03-29 22:14:51,117 - SERVO - Channel 1 - From 89° to 89° - Joystick value: -20
+2025-03-29 22:14:51,169 - AXIS - Left Stick Y - Value: -106
+2025-03-29 22:14:51,171 - SERVO - Channel 1 - From 89° to 89° - Joystick value: -106
+2025-03-29 22:14:51,176 - AXIS - Left Stick X - Value: -13
+2025-03-29 22:14:51,180 - SERVO - Channel 0 - From 90° to 89° - Joystick value: -13
+2025-03-29 22:14:51,181 - AXIS - Left Stick Y - Value: -127
+2025-03-29 22:14:51,183 - SERVO - Channel 1 - From 89° to 89° - Joystick value: -127
+2025-03-29 22:14:51,245 - AXIS - Left Stick X - Value: -23
+2025-03-29 22:14:51,247 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -23
+2025-03-29 22:14:51,405 - AXIS - Left Stick X - Value: -21
+2025-03-29 22:14:51,410 - SERVO - Channel 0 - From 89° to 89° - Joystick value: -21
+2025-03-29 22:14:51,410 - AXIS - Left Stick Y - Value: -78
+2025-03-29 22:14:51,414 - SERVO - Channel 1 - From 89° to 89° - Joystick value: -78
+2025-03-29 22:14:51,416 - AXIS - Left Stick X - Value: 0
+2025-03-29 22:14:51,418 - SERVO - Channel 0 - From 89° to 90° - Joystick value: 0
+2025-03-29 22:14:51,419 - AXIS - Left Stick Y - Value: 0
+2025-03-29 22:14:51,421 - SERVO - Channel 1 - From 89° to 90° - Joystick value: 0
+2025-03-29 22:14:51,943 - AXIS - Right Stick X (PS3-Z) - Value: 17
+2025-03-29 22:14:51,946 - SERVO - Channel 2 - From 90° to 90° - Joystick value: 17
+2025-03-29 22:14:51,949 - AXIS - Right Stick X (PS3-Z) - Value: 25
+2025-03-29 22:14:51,952 - SERVO - Channel 2 - From 90° to 90° - Joystick value: 25
+2025-03-29 22:14:51,959 - AXIS - Right Stick X (PS3-Z) - Value: 34
+2025-03-29 22:14:51,962 - SERVO - Channel 2 - From 90° to 90° - Joystick value: 34
+2025-03-29 22:14:52,027 - AXIS - Right Stick X (PS3-Z) - Value: 91
+2025-03-29 22:14:52,029 - SERVO - Channel 2 - From 90° to 90° - Joystick value: 91
+2025-03-29 22:14:52,030 - AXIS - Right Stick Y (PS3-RX) - Value: 11
+2025-03-29 22:14:52,034 - SERVO - Channel 3 - From 90° to 90° - Joystick value: 11
+2025-03-29 22:14:52,065 - AXIS - Right Stick X (PS3-Z) - Value: 127
+2025-03-29 22:14:52,068 - SERVO - Channel 2 - From 90° to 90° - Joystick value: 127
+2025-03-29 22:14:52,069 - AXIS - Right Stick Y (PS3-RX) - Value: 0
+2025-03-29 22:14:52,071 - SERVO - Channel 3 - From 90° to 90° - Joystick value: 0
+2025-03-29 22:14:52,306 - AXIS - Right Stick X (PS3-Z) - Value: 124
+2025-03-29 22:14:52,308 - SERVO - Channel 2 - From 90° to 90° - Joystick value: 124
+2025-03-29 22:14:52,320 - AXIS - Right Stick X (PS3-Z) - Value: 84
+2025-03-29 22:14:52,322 - SERVO - Channel 2 - From 90° to 90° - Joystick value: 84
+2025-03-29 22:14:52,366 - AXIS - Right Stick X (PS3-Z) - Value: 0
+2025-03-29 22:14:52,369 - SERVO - Channel 2 - From 90° to 90° - Joystick value: 0
+2025-03-29 22:14:52,616 - AXIS - Right Stick X (PS3-Z) - Value: 22
+2025-03-29 22:14:52,618 - SERVO - Channel 2 - From 90° to 90° - Joystick value: 22
+2025-03-29 22:14:52,619 - AXIS - Right Stick Y (PS3-RX) - Value: 88
+2025-03-29 22:14:52,621 - SERVO - Channel 3 - From 90° to 90° - Joystick value: 88
+2025-03-29 22:14:52,624 - AXIS - Right Stick X (PS3-Z) - Value: 24
+2025-03-29 22:14:52,627 - SERVO - Channel 2 - From 90° to 90° - Joystick value: 24
+2025-03-29 22:14:52,628 - AXIS - Right Stick Y (PS3-RX) - Value: 106
+2025-03-29 22:14:52,633 - SERVO - Channel 3 - From 90° to 90° - Joystick value: 106
+2025-03-29 22:14:52,662 - AXIS - Right Stick X (PS3-Z) - Value: 30
+2025-03-29 22:14:52,666 - SERVO - Channel 2 - From 90° to 90° - Joystick value: 30
+2025-03-29 22:14:52,667 - AXIS - Right Stick Y (PS3-RX) - Value: 127
+2025-03-29 22:14:52,670 - SERVO - Channel 3 - From 90° to 90° - Joystick value: 127
+2025-03-29 22:14:52,745 - AXIS - Right Stick X (PS3-Z) - Value: 27
+2025-03-29 22:14:52,747 - SERVO - Channel 2 - From 90° to 90° - Joystick value: 27
+2025-03-29 22:14:52,785 - AXIS - Right Stick X (PS3-Z) - Value: 16
+2025-03-29 22:14:52,787 - SERVO - Channel 2 - From 90° to 90° - Joystick value: 16
+2025-03-29 22:14:52,791 - AXIS - Right Stick X (PS3-Z) - Value: 11
+2025-03-29 22:14:52,793 - SERVO - Channel 2 - From 90° to 90° - Joystick value: 11
+2025-03-29 22:14:52,805 - AXIS - Right Stick X (PS3-Z) - Value: 0
+2025-03-29 22:14:52,807 - SERVO - Channel 2 - From 90° to 90° - Joystick value: 0
+2025-03-29 22:14:52,868 - AXIS - Right Stick Y (PS3-RX) - Value: 126
+2025-03-29 22:14:52,871 - SERVO - Channel 3 - From 90° to 90° - Joystick value: 126
+2025-03-29 22:14:52,903 - AXIS - Right Stick X (PS3-Z) - Value: -48
+2025-03-29 22:14:52,906 - SERVO - Channel 2 - From 90° to 89° - Joystick value: -48
+2025-03-29 22:14:52,906 - AXIS - Right Stick Y (PS3-RX) - Value: 109
+2025-03-29 22:14:52,909 - SERVO - Channel 3 - From 90° to 90° - Joystick value: 109
+2025-03-29 22:14:52,918 - AXIS - Right Stick X (PS3-Z) - Value: -64
+2025-03-29 22:14:52,921 - SERVO - Channel 2 - From 89° to 89° - Joystick value: -64
+2025-03-29 22:14:52,921 - AXIS - Right Stick Y (PS3-RX) - Value: 106
+2025-03-29 22:14:52,923 - SERVO - Channel 3 - From 90° to 90° - Joystick value: 106
+2025-03-29 22:14:52,926 - AXIS - Right Stick X (PS3-Z) - Value: -72
+2025-03-29 22:14:52,929 - SERVO - Channel 2 - From 89° to 89° - Joystick value: -72
+2025-03-29 22:14:52,929 - AXIS - Right Stick Y (PS3-RX) - Value: 104
+2025-03-29 22:14:52,931 - SERVO - Channel 3 - From 90° to 90° - Joystick value: 104
+2025-03-29 22:14:52,965 - AXIS - Right Stick X (PS3-Z) - Value: -107
+2025-03-29 22:14:52,967 - SERVO - Channel 2 - From 89° to 89° - Joystick value: -107
+2025-03-29 22:14:52,967 - AXIS - Right Stick Y (PS3-RX) - Value: 93
+2025-03-29 22:14:52,970 - SERVO - Channel 3 - From 90° to 90° - Joystick value: 93
+2025-03-29 22:14:52,973 - AXIS - Right Stick X (PS3-Z) - Value: -121
+2025-03-29 22:14:52,975 - SERVO - Channel 2 - From 89° to 89° - Joystick value: -121
+2025-03-29 22:14:52,983 - AXIS - Right Stick X (PS3-Z) - Value: -127
+2025-03-29 22:14:52,985 - SERVO - Channel 2 - From 89° to 89° - Joystick value: -127
+2025-03-29 22:14:53,022 - AXIS - Right Stick Y (PS3-RX) - Value: 80
+2025-03-29 22:14:53,025 - SERVO - Channel 3 - From 90° to 90° - Joystick value: 80
+2025-03-29 22:14:53,027 - AXIS - Right Stick Y (PS3-RX) - Value: 75
+2025-03-29 22:14:53,029 - SERVO - Channel 3 - From 90° to 90° - Joystick value: 75
+2025-03-29 22:14:53,038 - AXIS - Right Stick Y (PS3-RX) - Value: 69
+2025-03-29 22:14:53,041 - SERVO - Channel 3 - From 90° to 90° - Joystick value: 69
+2025-03-29 22:14:53,091 - AXIS - Right Stick Y (PS3-RX) - Value: 50
+2025-03-29 22:14:53,093 - SERVO - Channel 3 - From 90° to 90° - Joystick value: 50
+2025-03-29 22:14:53,205 - AXIS - Right Stick Y (PS3-RX) - Value: 43
+2025-03-29 22:14:53,207 - SERVO - Channel 3 - From 90° to 90° - Joystick value: 43
+2025-03-29 22:14:53,225 - AXIS - Right Stick Y (PS3-RX) - Value: 0
+2025-03-29 22:14:53,228 - SERVO - Channel 3 - From 90° to 90° - Joystick value: 0
+2025-03-29 22:14:53,232 - AXIS - Right Stick X (PS3-Z) - Value: -126
+2025-03-29 22:14:53,236 - SERVO - Channel 2 - From 89° to 89° - Joystick value: -126
+2025-03-29 22:14:53,237 - AXIS - Right Stick Y (PS3-RX) - Value: -17
+2025-03-29 22:14:53,242 - SERVO - Channel 3 - From 90° to 89° - Joystick value: -17
+2025-03-29 22:14:53,273 - AXIS - Right Stick X (PS3-Z) - Value: 0
+2025-03-29 22:14:53,276 - SERVO - Channel 2 - From 89° to 90° - Joystick value: 0
+2025-03-29 22:14:53,277 - AXIS - Right Stick Y (PS3-RX) - Value: 0
+2025-03-29 22:14:53,281 - SERVO - Channel 3 - From 89° to 90° - Joystick value: 0
+2025-03-29 22:14:53,882 - BUTTON - D-Pad Left - Pressed - Code: 303
+2025-03-29 22:14:53,884 - SERVO - Channel 0 - From 90° to 0° - Global command
+2025-03-29 22:14:53,886 - SERVO - Channel 1 - From 90° to 0° - Global command
+2025-03-29 22:14:53,889 - SERVO - Channel 2 - From 90° to 0° - Global command
+2025-03-29 22:14:53,891 - SERVO - Channel 3 - From 90° to 0° - Global command
+2025-03-29 22:14:54,006 - BUTTON - D-Pad Left - Released - Code: 303
+2025-03-29 22:14:54,646 - BUTTON - D-Pad Down - Pressed - Code: 302
+2025-03-29 22:14:54,823 - BUTTON - D-Pad Down - Released - Code: 302
+2025-03-29 22:14:55,246 - BUTTON - D-Pad Right - Pressed - Code: 301
+2025-03-29 22:14:55,246 - All servo movement blocked (locked)
+2025-03-29 22:14:55,367 - BUTTON - D-Pad Right - Released - Code: 301
+2025-03-29 22:14:55,680 - BUTTON - D-Pad Up - Pressed - Code: 300
+2025-03-29 22:14:55,680 - All servo movement blocked (locked)
+2025-03-29 22:14:55,789 - BUTTON - D-Pad Up - Released - Code: 300
+2025-03-29 22:14:59,324 - AXIS - Right Stick Y (PS3-RX) - Value: -19
+2025-03-29 22:14:59,326 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,327 - AXIS - Right Stick Y (PS3-RX) - Value: -23
+2025-03-29 22:14:59,328 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,341 - AXIS - Right Stick Y (PS3-RX) - Value: -27
+2025-03-29 22:14:59,342 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,405 - AXIS - Right Stick Y (PS3-RX) - Value: -44
+2025-03-29 22:14:59,406 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,445 - AXIS - Right Stick Y (PS3-RX) - Value: -49
+2025-03-29 22:14:59,446 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,454 - AXIS - Right Stick Y (PS3-RX) - Value: -52
+2025-03-29 22:14:59,455 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,465 - AXIS - Right Stick Y (PS3-RX) - Value: -58
+2025-03-29 22:14:59,466 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,505 - AXIS - Right Stick Y (PS3-RX) - Value: -72
+2025-03-29 22:14:59,506 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,525 - AXIS - Right Stick Y (PS3-RX) - Value: -75
+2025-03-29 22:14:59,526 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,529 - AXIS - Right Stick Y (PS3-RX) - Value: -77
+2025-03-29 22:14:59,530 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,563 - AXIS - Right Stick Y (PS3-RX) - Value: -80
+2025-03-29 22:14:59,563 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,577 - AXIS - Right Stick Y (PS3-RX) - Value: -82
+2025-03-29 22:14:59,578 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,585 - AXIS - Right Stick Y (PS3-RX) - Value: -84
+2025-03-29 22:14:59,586 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,624 - AXIS - Right Stick Y (PS3-RX) - Value: -92
+2025-03-29 22:14:59,625 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,630 - AXIS - Right Stick Y (PS3-RX) - Value: -93
+2025-03-29 22:14:59,631 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,701 - AXIS - Right Stick X (PS3-Z) - Value: 12
+2025-03-29 22:14:59,702 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,709 - AXIS - Right Stick X (PS3-Z) - Value: 15
+2025-03-29 22:14:59,710 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,748 - AXIS - Right Stick X (PS3-Z) - Value: 29
+2025-03-29 22:14:59,748 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,754 - AXIS - Right Stick X (PS3-Z) - Value: 35
+2025-03-29 22:14:59,755 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,755 - AXIS - Right Stick Y (PS3-RX) - Value: -94
+2025-03-29 22:14:59,755 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,769 - AXIS - Right Stick X (PS3-Z) - Value: 45
+2025-03-29 22:14:59,770 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,770 - AXIS - Right Stick Y (PS3-RX) - Value: -96
+2025-03-29 22:14:59,770 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,803 - AXIS - Right Stick X (PS3-Z) - Value: 66
+2025-03-29 22:14:59,803 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,804 - AXIS - Right Stick Y (PS3-RX) - Value: -104
+2025-03-29 22:14:59,804 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,812 - AXIS - Right Stick X (PS3-Z) - Value: 69
+2025-03-29 22:14:59,812 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,822 - AXIS - Right Stick X (PS3-Z) - Value: 72
+2025-03-29 22:14:59,822 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,865 - AXIS - Right Stick X (PS3-Z) - Value: 84
+2025-03-29 22:14:59,866 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,867 - AXIS - Right Stick X (PS3-Z) - Value: 87
+2025-03-29 22:14:59,868 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,878 - AXIS - Right Stick X (PS3-Z) - Value: 97
+2025-03-29 22:14:59,878 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:14:59,925 - AXIS - Right Stick X (PS3-Z) - Value: 127
+2025-03-29 22:14:59,926 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,005 - AXIS - Right Stick Y (PS3-RX) - Value: -72
+2025-03-29 22:15:00,006 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,044 - AXIS - Right Stick Y (PS3-RX) - Value: -51
+2025-03-29 22:15:00,045 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,057 - AXIS - Right Stick Y (PS3-RX) - Value: -33
+2025-03-29 22:15:00,062 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,073 - AXIS - Right Stick Y (PS3-RX) - Value: -21
+2025-03-29 22:15:00,073 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,105 - AXIS - Right Stick Y (PS3-RX) - Value: 30
+2025-03-29 22:15:00,106 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,115 - AXIS - Right Stick Y (PS3-RX) - Value: 48
+2025-03-29 22:15:00,116 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,165 - AXIS - Right Stick Y (PS3-RX) - Value: 99
+2025-03-29 22:15:00,166 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,178 - AXIS - Right Stick Y (PS3-RX) - Value: 106
+2025-03-29 22:15:00,178 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,182 - AXIS - Right Stick X (PS3-Z) - Value: 120
+2025-03-29 22:15:00,183 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,184 - AXIS - Right Stick Y (PS3-RX) - Value: 114
+2025-03-29 22:15:00,184 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,225 - AXIS - Right Stick X (PS3-Z) - Value: 83
+2025-03-29 22:15:00,226 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,226 - AXIS - Right Stick Y (PS3-RX) - Value: 127
+2025-03-29 22:15:00,226 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,246 - AXIS - Right Stick X (PS3-Z) - Value: 69
+2025-03-29 22:15:00,246 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,297 - AXIS - Right Stick X (PS3-Z) - Value: -14
+2025-03-29 22:15:00,297 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,361 - AXIS - Right Stick X (PS3-Z) - Value: -98
+2025-03-29 22:15:00,361 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,362 - AXIS - Right Stick Y (PS3-RX) - Value: 105
+2025-03-29 22:15:00,362 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,403 - AXIS - Right Stick X (PS3-Z) - Value: -114
+2025-03-29 22:15:00,403 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,404 - AXIS - Right Stick Y (PS3-RX) - Value: 53
+2025-03-29 22:15:00,404 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,407 - AXIS - Right Stick X (PS3-Z) - Value: -116
+2025-03-29 22:15:00,408 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,408 - AXIS - Right Stick Y (PS3-RX) - Value: 33
+2025-03-29 22:15:00,408 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,418 - AXIS - Right Stick Y (PS3-RX) - Value: 16
+2025-03-29 22:15:00,418 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,429 - AXIS - Right Stick Y (PS3-RX) - Value: 0
+2025-03-29 22:15:00,431 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,473 - AXIS - Right Stick X (PS3-Z) - Value: -117
+2025-03-29 22:15:00,474 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,474 - AXIS - Right Stick Y (PS3-RX) - Value: -45
+2025-03-29 22:15:00,475 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,476 - AXIS - Right Stick X (PS3-Z) - Value: -119
+2025-03-29 22:15:00,477 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,478 - AXIS - Right Stick Y (PS3-RX) - Value: -51
+2025-03-29 22:15:00,478 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,486 - AXIS - Right Stick X (PS3-Z) - Value: -120
+2025-03-29 22:15:00,487 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,487 - AXIS - Right Stick Y (PS3-RX) - Value: -54
+2025-03-29 22:15:00,487 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,527 - AXIS - Right Stick Y (PS3-RX) - Value: -45
+2025-03-29 22:15:00,528 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,531 - AXIS - Right Stick X (PS3-Z) - Value: -102
+2025-03-29 22:15:00,532 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,533 - AXIS - Right Stick Y (PS3-RX) - Value: -38
+2025-03-29 22:15:00,533 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,544 - AXIS - Right Stick X (PS3-Z) - Value: 0
+2025-03-29 22:15:00,545 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,545 - AXIS - Right Stick Y (PS3-RX) - Value: -12
+2025-03-29 22:15:00,546 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,581 - AXIS - Right Stick Y (PS3-RX) - Value: 0
+2025-03-29 22:15:00,582 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,653 - AXIS - Left Stick X - Value: 14
+2025-03-29 22:15:00,654 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,666 - AXIS - Left Stick X - Value: 26
+2025-03-29 22:15:00,667 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,667 - AXIS - Left Stick Y - Value: -10
+2025-03-29 22:15:00,668 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,708 - AXIS - Left Stick X - Value: 60
+2025-03-29 22:15:00,709 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,709 - AXIS - Left Stick Y - Value: -22
+2025-03-29 22:15:00,710 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,711 - AXIS - Left Stick X - Value: 75
+2025-03-29 22:15:00,712 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,712 - AXIS - Left Stick Y - Value: -28
+2025-03-29 22:15:00,713 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,722 - AXIS - Left Stick X - Value: 90
+2025-03-29 22:15:00,723 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,723 - AXIS - Left Stick Y - Value: -30
+2025-03-29 22:15:00,724 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,765 - AXIS - Left Stick X - Value: 127
+2025-03-29 22:15:00,766 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,766 - AXIS - Left Stick Y - Value: -31
+2025-03-29 22:15:00,766 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,767 - AXIS - Left Stick Y - Value: -28
+2025-03-29 22:15:00,768 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,778 - AXIS - Left Stick Y - Value: -20
+2025-03-29 22:15:00,778 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,844 - AXIS - Left Stick Y - Value: 39
+2025-03-29 22:15:00,845 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,884 - AXIS - Left Stick Y - Value: 84
+2025-03-29 22:15:00,885 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,893 - AXIS - Left Stick X - Value: 126
+2025-03-29 22:15:00,894 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,894 - AXIS - Left Stick Y - Value: 100
+2025-03-29 22:15:00,895 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,902 - AXIS - Left Stick X - Value: 114
+2025-03-29 22:15:00,902 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,903 - AXIS - Left Stick Y - Value: 112
+2025-03-29 22:15:00,903 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,947 - AXIS - Left Stick X - Value: 67
+2025-03-29 22:15:00,948 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,948 - AXIS - Left Stick Y - Value: 127
+2025-03-29 22:15:00,957 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:00,958 - AXIS - Left Stick X - Value: 54
+2025-03-29 22:15:00,958 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,025 - AXIS - Left Stick X - Value: -28
+2025-03-29 22:15:01,027 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,028 - AXIS - Left Stick X - Value: -46
+2025-03-29 22:15:01,030 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,064 - AXIS - Left Stick X - Value: -111
+2025-03-29 22:15:01,065 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,065 - AXIS - Left Stick Y - Value: 123
+2025-03-29 22:15:01,065 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,070 - AXIS - Left Stick X - Value: -127
+2025-03-29 22:15:01,071 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,071 - AXIS - Left Stick Y - Value: 104
+2025-03-29 22:15:01,071 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,082 - AXIS - Left Stick Y - Value: 80
+2025-03-29 22:15:01,082 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,124 - AXIS - Left Stick Y - Value: 41
+2025-03-29 22:15:01,125 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,125 - AXIS - Left Stick Y - Value: 34
+2025-03-29 22:15:01,126 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,138 - AXIS - Left Stick Y - Value: 22
+2025-03-29 22:15:01,138 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,204 - AXIS - Left Stick Y - Value: -79
+2025-03-29 22:15:01,205 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,243 - AXIS - Left Stick Y - Value: -127
+2025-03-29 22:15:01,243 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,264 - AXIS - Left Stick X - Value: -100
+2025-03-29 22:15:01,265 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,309 - AXIS - Left Stick X - Value: 0
+2025-03-29 22:15:01,310 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,321 - AXIS - Left Stick X - Value: 19
+2025-03-29 22:15:01,322 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,330 - AXIS - Left Stick X - Value: 40
+2025-03-29 22:15:01,330 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,363 - AXIS - Left Stick X - Value: 68
+2025-03-29 22:15:01,364 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,383 - AXIS - Left Stick X - Value: 81
+2025-03-29 22:15:01,383 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,386 - AXIS - Left Stick X - Value: 94
+2025-03-29 22:15:01,387 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,427 - AXIS - Left Stick X - Value: 127
+2025-03-29 22:15:01,427 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,428 - AXIS - Left Stick Y - Value: -111
+2025-03-29 22:15:01,428 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,431 - AXIS - Left Stick Y - Value: -103
+2025-03-29 22:15:01,432 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,443 - AXIS - Left Stick Y - Value: -91
+2025-03-29 22:15:01,444 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,485 - AXIS - Left Stick Y - Value: -47
+2025-03-29 22:15:01,486 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,487 - AXIS - Left Stick Y - Value: -28
+2025-03-29 22:15:01,488 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,498 - AXIS - Left Stick Y - Value: -10
+2025-03-29 22:15:01,498 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,509 - AXIS - Left Stick Y - Value: 0
+2025-03-29 22:15:01,510 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,555 - AXIS - Left Stick Y - Value: 43
+2025-03-29 22:15:01,556 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,568 - AXIS - Left Stick Y - Value: 44
+2025-03-29 22:15:01,568 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,608 - AXIS - Left Stick X - Value: 106
+2025-03-29 22:15:01,608 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,609 - AXIS - Left Stick Y - Value: 34
+2025-03-29 22:15:01,609 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,610 - AXIS - Left Stick X - Value: 90
+2025-03-29 22:15:01,610 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,610 - AXIS - Left Stick Y - Value: 24
+2025-03-29 22:15:01,611 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,621 - AXIS - Left Stick X - Value: 73
+2025-03-29 22:15:01,622 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,622 - AXIS - Left Stick Y - Value: 19
+2025-03-29 22:15:01,622 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,665 - AXIS - Left Stick X - Value: 30
+2025-03-29 22:15:01,666 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,666 - AXIS - Left Stick Y - Value: 12
+2025-03-29 22:15:01,667 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,667 - AXIS - Left Stick X - Value: 0
+2025-03-29 22:15:01,668 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:01,669 - AXIS - Left Stick Y - Value: 0
+2025-03-29 22:15:01,670 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:02,094 - BUTTON - R3 - Pressed - Code: 297
+2025-03-29 22:15:02,446 - BUTTON - L3 - Pressed - Code: 296
+2025-03-29 22:15:02,465 - BUTTON - R3 - Released - Code: 297
+2025-03-29 22:15:02,745 - BUTTON - L3 - Released - Code: 296
+2025-03-29 22:15:02,946 - BUTTON - R2 - Pressed - Code: 299
+2025-03-29 22:15:02,947 - All servo movement blocked (locked)
+2025-03-29 22:15:03,119 - BUTTON - R2 - Released - Code: 299
+2025-03-29 22:15:03,226 - BUTTON - L2 - Pressed - Code: 298
+2025-03-29 22:15:03,227 - All servo movement blocked (locked)
+2025-03-29 22:15:03,462 - BUTTON - L2 - Released - Code: 298
+2025-03-29 22:15:04,304 - BUTTON - R1 - Pressed - Code: 295
+2025-03-29 22:15:04,425 - BUTTON - R1 - Released - Code: 295
+2025-03-29 22:15:04,625 - BUTTON - L1 - Pressed - Code: 294
+2025-03-29 22:15:04,737 - BUTTON - L1 - Released - Code: 294
+2025-03-29 22:15:04,903 - BUTTON - Unknown (293) - Pressed - Code: 293
+2025-03-29 22:15:05,025 - BUTTON - Unknown (293) - Released - Code: 293
+2025-03-29 22:15:05,109 - BUTTON - PS Button - Pressed - Code: 292
+2025-03-29 22:15:05,269 - BUTTON - PS Button - Released - Code: 292
+2025-03-29 22:15:05,586 - AXIS - Left Stick X - Value: 13
+2025-03-29 22:15:05,587 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,587 - AXIS - Left Stick Y - Value: -10
+2025-03-29 22:15:05,587 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,623 - AXIS - Left Stick X - Value: 47
+2025-03-29 22:15:05,623 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,624 - AXIS - Left Stick Y - Value: 22
+2025-03-29 22:15:05,624 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,636 - AXIS - Left Stick X - Value: 66
+2025-03-29 22:15:05,637 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,637 - AXIS - Left Stick Y - Value: 47
+2025-03-29 22:15:05,638 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,639 - AXIS - Left Stick X - Value: 83
+2025-03-29 22:15:05,639 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,640 - AXIS - Left Stick Y - Value: 74
+2025-03-29 22:15:05,640 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,652 - AXIS - Left Stick X - Value: 102
+2025-03-29 22:15:05,653 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,654 - AXIS - Left Stick Y - Value: 104
+2025-03-29 22:15:05,655 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,684 - AXIS - Left Stick X - Value: 108
+2025-03-29 22:15:05,684 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,684 - AXIS - Left Stick Y - Value: 119
+2025-03-29 22:15:05,685 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,685 - AXIS - Right Stick X (PS3-Z) - Value: -12
+2025-03-29 22:15:05,685 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,686 - AXIS - Right Stick Y (PS3-RX) - Value: -25
+2025-03-29 22:15:05,686 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,696 - AXIS - Left Stick X - Value: 105
+2025-03-29 22:15:05,697 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,698 - AXIS - Left Stick Y - Value: 121
+2025-03-29 22:15:05,699 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,699 - AXIS - Right Stick X (PS3-Z) - Value: -13
+2025-03-29 22:15:05,700 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,701 - AXIS - Right Stick Y (PS3-RX) - Value: -39
+2025-03-29 22:15:05,702 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,705 - AXIS - Left Stick X - Value: 103
+2025-03-29 22:15:05,706 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,708 - AXIS - Right Stick X (PS3-Z) - Value: -16
+2025-03-29 22:15:05,709 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,709 - AXIS - Right Stick Y (PS3-RX) - Value: -58
+2025-03-29 22:15:05,710 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,744 - AXIS - Left Stick X - Value: 98
+2025-03-29 22:15:05,745 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,745 - AXIS - Left Stick Y - Value: 122
+2025-03-29 22:15:05,746 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,746 - AXIS - Right Stick X (PS3-Z) - Value: -47
+2025-03-29 22:15:05,747 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,747 - AXIS - Right Stick Y (PS3-RX) - Value: -119
+2025-03-29 22:15:05,748 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,751 - AXIS - Right Stick X (PS3-Z) - Value: -66
+2025-03-29 22:15:05,751 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,752 - AXIS - Right Stick Y (PS3-RX) - Value: -127
+2025-03-29 22:15:05,753 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,761 - AXIS - Left Stick X - Value: 97
+2025-03-29 22:15:05,762 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,762 - AXIS - Right Stick X (PS3-Z) - Value: -83
+2025-03-29 22:15:05,762 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,821 - AXIS - Left Stick X - Value: 84
+2025-03-29 22:15:05,822 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,822 - AXIS - Left Stick Y - Value: 127
+2025-03-29 22:15:05,823 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,823 - AXIS - Right Stick X (PS3-Z) - Value: -127
+2025-03-29 22:15:05,823 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,823 - AXIS - Right Stick Y (PS3-RX) - Value: -121
+2025-03-29 22:15:05,824 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,829 - AXIS - Left Stick X - Value: 72
+2025-03-29 22:15:05,830 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,830 - AXIS - Right Stick Y (PS3-RX) - Value: -105
+2025-03-29 22:15:05,831 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,861 - AXIS - Left Stick X - Value: -15
+2025-03-29 22:15:05,862 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,862 - AXIS - Left Stick Y - Value: 96
+2025-03-29 22:15:05,862 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,863 - AXIS - Right Stick Y (PS3-RX) - Value: -40
+2025-03-29 22:15:05,863 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,879 - AXIS - Left Stick X - Value: -59
+2025-03-29 22:15:05,879 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,879 - AXIS - Left Stick Y - Value: 57
+2025-03-29 22:15:05,880 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,880 - AXIS - Right Stick Y (PS3-RX) - Value: -18
+2025-03-29 22:15:05,880 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,885 - AXIS - Left Stick X - Value: -100
+2025-03-29 22:15:05,885 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,886 - AXIS - Left Stick Y - Value: 31
+2025-03-29 22:15:05,886 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,886 - AXIS - Right Stick Y (PS3-RX) - Value: 0
+2025-03-29 22:15:05,886 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,926 - AXIS - Left Stick X - Value: -127
+2025-03-29 22:15:05,927 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,927 - AXIS - Left Stick Y - Value: -20
+2025-03-29 22:15:05,927 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,927 - AXIS - Right Stick Y (PS3-RX) - Value: 70
+2025-03-29 22:15:05,928 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,939 - AXIS - Left Stick Y - Value: -27
+2025-03-29 22:15:05,940 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,940 - AXIS - Right Stick Y (PS3-RX) - Value: 89
+2025-03-29 22:15:05,940 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,943 - AXIS - Left Stick Y - Value: -35
+2025-03-29 22:15:05,943 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,944 - AXIS - Right Stick X (PS3-Z) - Value: -125
+2025-03-29 22:15:05,944 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,945 - AXIS - Right Stick Y (PS3-RX) - Value: 106
+2025-03-29 22:15:05,945 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,989 - AXIS - Left Stick Y - Value: -50
+2025-03-29 22:15:05,990 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,991 - AXIS - Right Stick X (PS3-Z) - Value: 0
+2025-03-29 22:15:05,992 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,992 - AXIS - Right Stick Y (PS3-RX) - Value: 127
+2025-03-29 22:15:05,993 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:05,999 - AXIS - Right Stick X (PS3-Z) - Value: 26
+2025-03-29 22:15:06,000 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,009 - AXIS - Right Stick X (PS3-Z) - Value: 66
+2025-03-29 22:15:06,011 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,045 - AXIS - Left Stick Y - Value: -22
+2025-03-29 22:15:06,045 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,046 - AXIS - Right Stick X (PS3-Z) - Value: 127
+2025-03-29 22:15:06,046 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,046 - AXIS - Right Stick Y (PS3-RX) - Value: 96
+2025-03-29 22:15:06,046 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,055 - AXIS - Left Stick Y - Value: 0
+2025-03-29 22:15:06,055 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,056 - AXIS - Right Stick Y (PS3-RX) - Value: 90
+2025-03-29 22:15:06,056 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,125 - AXIS - Left Stick X - Value: -96
+2025-03-29 22:15:06,126 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,126 - AXIS - Left Stick Y - Value: 127
+2025-03-29 22:15:06,127 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,127 - AXIS - Right Stick Y (PS3-RX) - Value: 0
+2025-03-29 22:15:06,127 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,165 - AXIS - Left Stick X - Value: 0
+2025-03-29 22:15:06,166 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,166 - AXIS - Right Stick X (PS3-Z) - Value: 109
+2025-03-29 22:15:06,167 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,167 - AXIS - Right Stick Y (PS3-RX) - Value: -124
+2025-03-29 22:15:06,167 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,184 - AXIS - Left Stick X - Value: 26
+2025-03-29 22:15:06,185 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,186 - AXIS - Right Stick X (PS3-Z) - Value: 65
+2025-03-29 22:15:06,186 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,186 - AXIS - Right Stick Y (PS3-RX) - Value: -127
+2025-03-29 22:15:06,187 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,226 - AXIS - Left Stick X - Value: 87
+2025-03-29 22:15:06,227 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,227 - AXIS - Right Stick X (PS3-Z) - Value: -93
+2025-03-29 22:15:06,227 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,233 - AXIS - Left Stick X - Value: 103
+2025-03-29 22:15:06,234 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,234 - AXIS - Left Stick Y - Value: 121
+2025-03-29 22:15:06,235 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,235 - AXIS - Right Stick X (PS3-Z) - Value: -111
+2025-03-29 22:15:06,235 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,245 - AXIS - Left Stick X - Value: 116
+2025-03-29 22:15:06,245 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,246 - AXIS - Left Stick Y - Value: 105
+2025-03-29 22:15:06,246 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,246 - AXIS - Right Stick X (PS3-Z) - Value: -119
+2025-03-29 22:15:06,246 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,307 - AXIS - Left Stick X - Value: 127
+2025-03-29 22:15:06,308 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,309 - AXIS - Left Stick Y - Value: 0
+2025-03-29 22:15:06,310 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,310 - AXIS - Right Stick X (PS3-Z) - Value: -127
+2025-03-29 22:15:06,311 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,311 - AXIS - Right Stick Y (PS3-RX) - Value: -64
+2025-03-29 22:15:06,311 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,344 - AXIS - Left Stick Y - Value: -64
+2025-03-29 22:15:06,344 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,345 - AXIS - Right Stick Y (PS3-RX) - Value: 0
+2025-03-29 22:15:06,345 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,349 - AXIS - Left Stick Y - Value: -88
+2025-03-29 22:15:06,350 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,351 - AXIS - Right Stick Y (PS3-RX) - Value: 28
+2025-03-29 22:15:06,351 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,357 - AXIS - Left Stick Y - Value: -103
+2025-03-29 22:15:06,358 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,359 - AXIS - Right Stick Y (PS3-RX) - Value: 58
+2025-03-29 22:15:06,361 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,402 - AXIS - Left Stick X - Value: 45
+2025-03-29 22:15:06,403 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,403 - AXIS - Left Stick Y - Value: -90
+2025-03-29 22:15:06,404 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,404 - AXIS - Right Stick X (PS3-Z) - Value: -108
+2025-03-29 22:15:06,404 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,405 - AXIS - Right Stick Y (PS3-RX) - Value: 62
+2025-03-29 22:15:06,406 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,413 - AXIS - Left Stick X - Value: -18
+2025-03-29 22:15:06,414 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,414 - AXIS - Left Stick Y - Value: 19
+2025-03-29 22:15:06,415 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,415 - AXIS - Right Stick X (PS3-Z) - Value: -79
+2025-03-29 22:15:06,415 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,415 - AXIS - Right Stick Y (PS3-RX) - Value: 33
+2025-03-29 22:15:06,416 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,428 - AXIS - Left Stick X - Value: 0
+2025-03-29 22:15:06,429 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,429 - AXIS - Left Stick Y - Value: 0
+2025-03-29 22:15:06,430 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,430 - AXIS - Right Stick X (PS3-Z) - Value: 0
+2025-03-29 22:15:06,431 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,431 - AXIS - Right Stick Y (PS3-RX) - Value: 0
+2025-03-29 22:15:06,431 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,705 - AXIS - Left Stick X - Value: -17
+2025-03-29 22:15:06,705 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,706 - AXIS - Left Stick Y - Value: 13
+2025-03-29 22:15:06,706 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,717 - AXIS - Left Stick X - Value: -20
+2025-03-29 22:15:06,718 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,718 - AXIS - Left Stick Y - Value: 16
+2025-03-29 22:15:06,718 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,729 - AXIS - Left Stick X - Value: -22
+2025-03-29 22:15:06,729 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,730 - AXIS - Left Stick Y - Value: 21
+2025-03-29 22:15:06,730 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,764 - AXIS - Left Stick X - Value: -31
+2025-03-29 22:15:06,764 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,765 - AXIS - Left Stick Y - Value: 52
+2025-03-29 22:15:06,766 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,766 - AXIS - Right Stick X (PS3-Z) - Value: 15
+2025-03-29 22:15:06,767 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,786 - AXIS - Left Stick X - Value: -35
+2025-03-29 22:15:06,787 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,787 - AXIS - Left Stick Y - Value: 75
+2025-03-29 22:15:06,788 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,823 - AXIS - Left Stick X - Value: -39
+2025-03-29 22:15:06,824 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,824 - AXIS - Left Stick Y - Value: 118
+2025-03-29 22:15:06,825 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,825 - AXIS - Right Stick Y (PS3-RX) - Value: -16
+2025-03-29 22:15:06,825 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,837 - AXIS - Left Stick X - Value: -40
+2025-03-29 22:15:06,838 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,838 - AXIS - Left Stick Y - Value: 127
+2025-03-29 22:15:06,838 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,839 - AXIS - Right Stick Y (PS3-RX) - Value: -21
+2025-03-29 22:15:06,839 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,841 - AXIS - Left Stick X - Value: -42
+2025-03-29 22:15:06,842 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,842 - AXIS - Right Stick Y (PS3-RX) - Value: -28
+2025-03-29 22:15:06,843 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,883 - AXIS - Right Stick X (PS3-Z) - Value: 17
+2025-03-29 22:15:06,884 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,884 - AXIS - Right Stick Y (PS3-RX) - Value: -79
+2025-03-29 22:15:06,885 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,885 - AXIS - Right Stick Y (PS3-RX) - Value: -95
+2025-03-29 22:15:06,886 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,897 - AXIS - Left Stick X - Value: -43
+2025-03-29 22:15:06,898 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,898 - AXIS - Right Stick Y (PS3-RX) - Value: -111
+2025-03-29 22:15:06,898 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,909 - AXIS - Right Stick X (PS3-Z) - Value: 19
+2025-03-29 22:15:06,909 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,910 - AXIS - Right Stick Y (PS3-RX) - Value: -124
+2025-03-29 22:15:06,910 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,942 - AXIS - Left Stick X - Value: -42
+2025-03-29 22:15:06,943 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,943 - AXIS - Right Stick X (PS3-Z) - Value: 22
+2025-03-29 22:15:06,943 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:06,944 - AXIS - Right Stick Y (PS3-RX) - Value: -127
+2025-03-29 22:15:06,944 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,001 - AXIS - Right Stick X (PS3-Z) - Value: 23
+2025-03-29 22:15:07,002 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,026 - AXIS - Right Stick X (PS3-Z) - Value: 22
+2025-03-29 22:15:07,027 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,063 - AXIS - Right Stick X (PS3-Z) - Value: 20
+2025-03-29 22:15:07,064 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,140 - AXIS - Left Stick X - Value: -41
+2025-03-29 22:15:07,140 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,202 - AXIS - Left Stick X - Value: 0
+2025-03-29 22:15:07,203 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,203 - AXIS - Left Stick Y - Value: 0
+2025-03-29 22:15:07,203 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,204 - AXIS - Right Stick X (PS3-Z) - Value: 0
+2025-03-29 22:15:07,204 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,204 - AXIS - Right Stick Y (PS3-RX) - Value: -27
+2025-03-29 22:15:07,205 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,244 - AXIS - Right Stick Y (PS3-RX) - Value: 0
+2025-03-29 22:15:07,245 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,422 - AXIS - Left Stick Y - Value: -12
+2025-03-29 22:15:07,423 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,426 - AXIS - Left Stick Y - Value: -17
+2025-03-29 22:15:07,427 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,428 - AXIS - Right Stick Y (PS3-RX) - Value: 20
+2025-03-29 22:15:07,428 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,441 - AXIS - Left Stick Y - Value: -27
+2025-03-29 22:15:07,442 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,442 - AXIS - Right Stick Y (PS3-RX) - Value: 33
+2025-03-29 22:15:07,442 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,449 - AXIS - Left Stick Y - Value: -41
+2025-03-29 22:15:07,449 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,450 - AXIS - Right Stick Y (PS3-RX) - Value: 50
+2025-03-29 22:15:07,450 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,481 - AXIS - Left Stick X - Value: -33
+2025-03-29 22:15:07,485 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,485 - AXIS - Left Stick Y - Value: -127
+2025-03-29 22:15:07,486 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,486 - AXIS - Right Stick Y (PS3-RX) - Value: 126
+2025-03-29 22:15:07,487 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,493 - AXIS - Left Stick X - Value: -47
+2025-03-29 22:15:07,494 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,495 - AXIS - Right Stick Y (PS3-RX) - Value: 127
+2025-03-29 22:15:07,495 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,543 - AXIS - Left Stick X - Value: -35
+2025-03-29 22:15:07,544 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,617 - AXIS - Right Stick Y (PS3-RX) - Value: 78
+2025-03-29 22:15:07,618 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,629 - AXIS - Right Stick Y (PS3-RX) - Value: -36
+2025-03-29 22:15:07,629 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,662 - AXIS - Left Stick X - Value: 0
+2025-03-29 22:15:07,663 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,664 - AXIS - Left Stick Y - Value: -16
+2025-03-29 22:15:07,664 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,665 - AXIS - Right Stick Y (PS3-RX) - Value: 0
+2025-03-29 22:15:07,667 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,677 - AXIS - Left Stick Y - Value: 0
+2025-03-29 22:15:07,678 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,905 - AXIS - Left Stick X - Value: -13
+2025-03-29 22:15:07,905 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,910 - AXIS - Left Stick X - Value: -14
+2025-03-29 22:15:07,910 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,922 - AXIS - Left Stick X - Value: -15
+2025-03-29 22:15:07,923 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,923 - AXIS - Right Stick X (PS3-Z) - Value: 16
+2025-03-29 22:15:07,923 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,989 - AXIS - Left Stick X - Value: -86
+2025-03-29 22:15:07,989 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:07,990 - AXIS - Right Stick X (PS3-Z) - Value: 70
+2025-03-29 22:15:07,990 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,025 - AXIS - Left Stick X - Value: -127
+2025-03-29 22:15:08,025 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,026 - AXIS - Right Stick X (PS3-Z) - Value: 125
+2025-03-29 22:15:08,026 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,026 - AXIS - Right Stick Y (PS3-RX) - Value: -18
+2025-03-29 22:15:08,027 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,034 - AXIS - Right Stick X (PS3-Z) - Value: 127
+2025-03-29 22:15:08,035 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,035 - AXIS - Right Stick Y (PS3-RX) - Value: -21
+2025-03-29 22:15:08,036 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,045 - AXIS - Right Stick Y (PS3-RX) - Value: -24
+2025-03-29 22:15:08,045 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,081 - AXIS - Right Stick Y (PS3-RX) - Value: -19
+2025-03-29 22:15:08,082 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,095 - AXIS - Right Stick Y (PS3-RX) - Value: -17
+2025-03-29 22:15:08,095 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,101 - AXIS - Right Stick Y (PS3-RX) - Value: -16
+2025-03-29 22:15:08,101 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,157 - AXIS - Right Stick Y (PS3-RX) - Value: -21
+2025-03-29 22:15:08,158 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,169 - AXIS - Right Stick Y (PS3-RX) - Value: -25
+2025-03-29 22:15:08,169 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,205 - AXIS - Left Stick X - Value: -119
+2025-03-29 22:15:08,206 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,206 - AXIS - Right Stick X (PS3-Z) - Value: -34
+2025-03-29 22:15:08,206 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,207 - AXIS - Right Stick Y (PS3-RX) - Value: 0
+2025-03-29 22:15:08,207 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,216 - AXIS - Left Stick X - Value: 32
+2025-03-29 22:15:08,217 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,217 - AXIS - Right Stick X (PS3-Z) - Value: 0
+2025-03-29 22:15:08,218 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,225 - AXIS - Left Stick X - Value: 0
+2025-03-29 22:15:08,226 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,461 - AXIS - Right Stick X (PS3-Z) - Value: -12
+2025-03-29 22:15:08,461 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,529 - AXIS - Left Stick X - Value: 36
+2025-03-29 22:15:08,530 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,531 - AXIS - Right Stick X (PS3-Z) - Value: -54
+2025-03-29 22:15:08,532 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,532 - AXIS - Left Stick X - Value: 56
+2025-03-29 22:15:08,533 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,534 - AXIS - Right Stick X (PS3-Z) - Value: -77
+2025-03-29 22:15:08,535 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,571 - AXIS - Left Stick X - Value: 120
+2025-03-29 22:15:08,571 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,572 - AXIS - Left Stick Y - Value: 26
+2025-03-29 22:15:08,572 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,572 - AXIS - Right Stick X (PS3-Z) - Value: -127
+2025-03-29 22:15:08,572 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,585 - AXIS - Left Stick X - Value: 127
+2025-03-29 22:15:08,585 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,586 - AXIS - Left Stick Y - Value: 40
+2025-03-29 22:15:08,586 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,621 - AXIS - Left Stick Y - Value: 34
+2025-03-29 22:15:08,622 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,646 - AXIS - Left Stick Y - Value: 24
+2025-03-29 22:15:08,647 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,685 - AXIS - Left Stick Y - Value: 22
+2025-03-29 22:15:08,686 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,744 - AXIS - Left Stick X - Value: 105
+2025-03-29 22:15:08,745 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,746 - AXIS - Left Stick Y - Value: 16
+2025-03-29 22:15:08,747 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,747 - AXIS - Right Stick X (PS3-Z) - Value: -111
+2025-03-29 22:15:08,748 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,748 - AXIS - Right Stick Y (PS3-RX) - Value: -18
+2025-03-29 22:15:08,749 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,756 - AXIS - Left Stick X - Value: 0
+2025-03-29 22:15:08,759 - Servo 0 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,760 - AXIS - Left Stick Y - Value: 0
+2025-03-29 22:15:08,760 - Servo 1 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,761 - AXIS - Right Stick X (PS3-Z) - Value: 0
+2025-03-29 22:15:08,762 - Servo 2 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:08,762 - AXIS - Right Stick Y (PS3-RX) - Value: 0
+2025-03-29 22:15:08,763 - Servo 3 movement blocked (locked:True, hold:False)
+2025-03-29 22:15:09,163 - BUTTON - D-Pad Left - Pressed - Code: 303
+2025-03-29 22:15:09,164 - All servo movement blocked (locked)
+2025-03-29 22:15:09,237 - BUTTON - D-Pad Left - Released - Code: 303
+2025-03-29 22:15:09,348 - BUTTON - D-Pad Left - Pressed - Code: 303
+2025-03-29 22:15:09,349 - All servo movement blocked (locked)
+2025-03-29 22:15:09,406 - BUTTON - D-Pad Left - Released - Code: 303
+2025-03-29 22:15:09,969 - BUTTON - Select - Pressed - Code: 288
+2025-03-29 22:15:10,127 - BUTTON - Select - Released - Code: 288
+2025-03-29 22:15:10,362 - BUTTON - Start - Pressed - Code: 291
+2025-03-29 22:15:10,363 - All servo movement blocked (locked)
+2025-03-29 22:15:10,509 - BUTTON - Start - Released - Code: 291
+2025-03-29 22:15:10,841 - BUTTON - Cross (✕) - Pressed - Code: 304
+2025-03-29 22:15:11,083 - BUTTON - Cross (✕) - Released - Code: 304
+2025-03-29 22:15:11,269 - BUTTON - D-Pad Down - Pressed - Code: 302
+2025-03-29 22:15:11,404 - BUTTON - D-Pad Down - Released - Code: 302
+2025-03-29 22:15:11,521 - BUTTON - D-Pad Right - Pressed - Code: 301
+2025-03-29 22:15:11,525 - SERVO - Channel 1 - From 0° to 180° - Global command
+2025-03-29 22:15:11,528 - SERVO - Channel 2 - From 0° to 180° - Global command
+2025-03-29 22:15:11,531 - SERVO - Channel 3 - From 0° to 180° - Global command
+2025-03-29 22:15:11,685 - BUTTON - D-Pad Right - Released - Code: 301
+2025-03-29 22:15:12,359 - BUTTON - D-Pad Right - Pressed - Code: 301
+2025-03-29 22:15:12,362 - SERVO - Channel 1 - From 180° to 180° - Global command
+2025-03-29 22:15:12,364 - SERVO - Channel 2 - From 180° to 180° - Global command
+2025-03-29 22:15:12,367 - SERVO - Channel 3 - From 180° to 180° - Global command
+2025-03-29 22:15:12,466 - BUTTON - D-Pad Right - Released - Code: 301
+2025-03-29 22:15:12,643 - BUTTON - D-Pad Right - Pressed - Code: 301
+2025-03-29 22:15:12,646 - SERVO - Channel 1 - From 180° to 180° - Global command
+2025-03-29 22:15:12,649 - SERVO - Channel 2 - From 180° to 180° - Global command
+2025-03-29 22:15:12,651 - SERVO - Channel 3 - From 180° to 180° - Global command
+2025-03-29 22:15:12,725 - BUTTON - D-Pad Right - Released - Code: 301
+2025-03-29 22:15:15,525 - AXIS - Left Stick X - Value: -10
+2025-03-29 22:15:15,526 - Servo 0 movement blocked (locked:False, hold:True)
+2025-03-29 22:15:15,845 - BUTTON - D-Pad Right - Pressed - Code: 301
+2025-03-29 22:15:15,848 - SERVO - Channel 1 - From 180° to 180° - Global command
+2025-03-29 22:15:15,850 - SERVO - Channel 2 - From 180° to 180° - Global command
+2025-03-29 22:15:15,852 - SERVO - Channel 3 - From 180° to 180° - Global command
+2025-03-29 22:15:15,888 - AXIS - Left Stick X - Value: -11
+2025-03-29 22:15:15,888 - Servo 0 movement blocked (locked:False, hold:True)
+2025-03-29 22:15:15,897 - BUTTON - D-Pad Right - Released - Code: 301
+2025-03-29 22:15:16,364 - BUTTON - D-Pad Right - Pressed - Code: 301
+2025-03-29 22:15:16,366 - SERVO - Channel 1 - From 180° to 180° - Global command
+2025-03-29 22:15:16,369 - SERVO - Channel 2 - From 180° to 180° - Global command
+2025-03-29 22:15:16,373 - SERVO - Channel 3 - From 180° to 180° - Global command
+2025-03-29 22:15:16,788 - AXIS - Left Stick X - Value: 0
+2025-03-29 22:15:16,788 - Servo 0 movement blocked (locked:False, hold:True)
+2025-03-29 22:15:17,020 - BUTTON - D-Pad Right - Released - Code: 301
+2025-03-29 22:15:17,208 - BUTTON - D-Pad Down - Pressed - Code: 302
+2025-03-29 22:15:17,503 - BUTTON - D-Pad Down - Released - Code: 302
+2025-03-29 22:15:17,625 - BUTTON - D-Pad Left - Pressed - Code: 303
+2025-03-29 22:15:17,626 - All servo movement blocked (locked)
+2025-03-29 22:15:18,109 - BUTTON - D-Pad Left - Released - Code: 303
+2025-03-29 22:15:18,221 - BUTTON - D-Pad Up - Pressed - Code: 300
+2025-03-29 22:15:18,222 - All servo movement blocked (locked)
+2025-03-29 22:15:18,785 - BUTTON - D-Pad Up - Released - Code: 300
+2025-03-29 22:15:20,044 - BUTTON - D-Pad Left - Pressed - Code: 303
+2025-03-29 22:15:20,044 - All servo movement blocked (locked)
+2025-03-29 22:15:20,206 - BUTTON - D-Pad Left - Released - Code: 303
+2025-03-29 22:15:20,935 - BUTTON - D-Pad Right - Pressed - Code: 301
+2025-03-29 22:15:20,936 - All servo movement blocked (locked)
+2025-03-29 22:15:21,046 - BUTTON - D-Pad Right - Released - Code: 301
+2025-03-29 22:15:21,365 - BUTTON - L2 - Pressed - Code: 298
+2025-03-29 22:15:21,365 - All servo movement blocked (locked)
+2025-03-29 22:15:21,707 - BUTTON - L2 - Released - Code: 298
+2025-03-29 22:15:21,712 - BUTTON - D-Pad Right - Pressed - Code: 301
+2025-03-29 22:15:21,713 - All servo movement blocked (locked)
+2025-03-29 22:15:21,845 - BUTTON - D-Pad Right - Released - Code: 301
+2025-03-29 22:15:22,062 - BUTTON - D-Pad Down - Pressed - Code: 302
+2025-03-29 22:15:22,206 - BUTTON - D-Pad Down - Released - Code: 302
+2025-03-29 22:15:22,387 - BUTTON - D-Pad Down - Pressed - Code: 302
+2025-03-29 22:15:22,431 - BUTTON - D-Pad Right - Pressed - Code: 301
+2025-03-29 22:15:22,432 - All servo movement blocked (locked)
+2025-03-29 22:15:22,500 - BUTTON - D-Pad Left - Pressed - Code: 303
+2025-03-29 22:15:22,502 - All servo movement blocked (locked)
+2025-03-29 22:15:22,681 - BUTTON - D-Pad Right - Released - Code: 301
+2025-03-29 22:15:22,722 - BUTTON - PS Button - Pressed - Code: 292
