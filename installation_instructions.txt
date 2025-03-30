@@ -1,0 +1,135 @@
+# PlayStation 3 Controller Setup Guide
+
+## Overview
+
+This guide will help you set up your Raspberry Pi to work with PlayStation 3 controllers and the Servo Controller application.
+
+## Files
+
+1. `servo_controller.py` - Main application
+2. `templates/servo_controller.html` - Web interface template
+
+## Installation
+
+1. **Create project directory**:
+   ```bash
+   mkdir -p ~/servo_controller/templates
+   cd ~/servo_controller
+   ```
+
+2. **Download the files**:
+   - Save `servo_controller.py` in the main directory
+   - Save `servo_controller.html` in the templates directory
+
+3. **Install required packages**:
+   ```bash
+   sudo apt-get update
+   sudo apt-get install -y python3-pip python3-dev i2c-tools joystick
+   pip3 install flask evdev adafruit-pca9685 mpu6050-raspberrypi
+   ```
+
+4. **Enable I2C**:
+   ```bash
+   sudo raspi-config nonint do_i2c 0
+   ```
+
+5. **Make the script executable**:
+   ```bash
+   chmod +x servo_controller.py
+   ```
+
+## Usage
+
+### Controller Testing Mode
+
+To identify and map your controller buttons:
+
+```bash
+python3 servo_controller.py --test-controller
+```
+
+This will guide you through testing each button and joystick axis, and will log all events to `config_debug.log`.
+
+### Normal Operation
+
+To start the servo controller with all features:
+
+```bash
+python3 servo_controller.py
+```
+
+This will start both the console interface and the web interface.
+
+### Web Interface Only
+
+To run only the web interface (without controller):
+
+```bash
+python3 servo_controller.py --web-only
+```
+
+Access the web interface at: `http://[your-raspberry-pi-ip]:5000/`
+
+## Troubleshooting
+
+### Controller Issues
+
+1. **Controller not detected**:
+   - Check if the controller is turned on
+   - For Bluetooth controllers, ensure they are paired
+   - For USB controllers, try a different port
+
+2. **Button mapping issues**:
+   - Run the test mode to identify correct button codes
+   - Update the `PS3_BUTTON_MAPPINGS` dictionary if needed
+
+### Hardware Issues
+
+1. **PCA9685 not detected**:
+   - Verify I2C connections
+   - Run `i2cdetect -y 1` to check for I2C devices
+   - Common address for PCA9685 is 0x40
+
+2. **MPU6050 not detected**:
+   - Verify I2C connections
+   - Common address for MPU6050 is 0x68
+
+### Web Interface Issues
+
+1. **Cannot access web interface**:
+   - Check that the Flask server is running
+   - Verify you're using the correct IP address
+   - Make sure port 5000 is not blocked
+
+## PS3 Controller Button Map
+
+Based on the test log, here's the mapping for the PS3 controller:
+
+| Physical Button | Code | Function |
+|----------------|------|----------|
+| Cross (✕)      | 304  | Hold Servo 0 |
+| Circle (○)     | 305  | Hold Servo 1 |
+| Square (□)     | 308  | Hold Servo 2 |
+| Triangle (△)   | 307  | Hold Servo 3 |
+| L1 (Left Shoulder) | 294 | Decrease Speed |
+| R1 (Right Shoulder) | 295 | Increase Speed |
+| L2 (Left Trigger) | 298 | Move All to 0° |
+| R2 (Right Trigger) | 299 | Move All to 180° |
+| D-Pad Up       | 300  | Move All to 90° |
+| D-Pad Down     | 302  | Toggle Lock |
+| D-Pad Left     | 303  | Move All to 0° |
+| D-Pad Right    | 301  | Move All to 180° |
+| Select         | 288  | (Not assigned) |
+| Start          | 291  | Move All to 90° |
+| PS Button      | 292  | Exit (press twice) |
+| L3 (Left Stick Press) | 296 | (Not assigned) |
+| R3 (Right Stick Press) | 297 | (Not assigned) |
+
+## Joystick Mapping
+
+| Joystick | Axis Code | Servo Channel |
+|----------|-----------|---------------|
+| Left Stick X | 0 | Servo 0 |
+| Left Stick Y | 1 | Servo 1 |
+| Right Stick X | 2 | Servo 2 |
+| Right Stick Y | 3 | Servo 3 |
