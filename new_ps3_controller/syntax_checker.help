@@ -1,0 +1,11 @@
+# Check a file
+python syntax_checker.py servo_controller.py
+
+# Fix a file
+python syntax_checker.py servo_controller.py --fix
+
+# Check an entire directory
+python syntax_checker.py /path/to/project
+
+# Install dependencies
+python syntax_checker.py --install
