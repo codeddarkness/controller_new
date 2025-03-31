@@ -13,6 +13,8 @@ square (west)
 triangle (north)
 circle (east)
 X button (south)
+left joystick button
+right joystick button
 left joystick down
 left joystick right
 left joystick up
